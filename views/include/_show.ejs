@@ -1,0 +1,21 @@
+<% for(var i = 0; i < lpg.length; i++) { %>
+<tr>
+    <td><%= i + 1 %></td>
+    <td><%= lpg[i].tanggal %></td>
+    <td><%= lpg[i].kode %></td>
+    <td><%= lpg[i].nama %></td>
+    <td><%= lpg[i].keterangan %></td>
+    <td><%= lpg[i].tabung_transfer %></td>
+    <td><%= lpg[i].tabung_tunai %></td>
+    <td><%= lpg[i].bayar_transfer %></td>
+    <td><%= lpg[i].bayar_tunai %></td>
+    <td>
+        <a href="/update-data?id=<%= lpg[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a class="btn border-shadow delete" data-id=<%= lpg[i]._id%> >
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>
