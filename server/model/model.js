@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 /**
  * @description Mongoose schema
  * @return mongoose.Schema
- * @example this is an example to use the schema for mongoose model:
+ * @example merupakan contoh schema untuk model mongoose:
  * const LPG = mongoose.model('database_model_name', schema)
  */
 var schema = new mongoose.Schema({
@@ -27,7 +27,7 @@ var schema = new mongoose.Schema({
 })
 
 /** 
- * @description Mongoose model with name 'userdb' and schema 'schema'
+ * @description Mongoose model dengan nama 'userdb' dan schema 'schema'
  * 
  */ 
 const Elpijidb = mongoose.model('userdb', schema);

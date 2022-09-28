@@ -1,18 +1,18 @@
 /**
- * @description to create requests by passing the relevant config to axios
+ * @description untuk membuat request dengan mengoper confiq yang relevan ke axios
  */
 const axios = require('axios');
 
 /**
- * @description Route and render home page
+ * @description Route dan render home page
  * @param {*} req 
  * @param {*} res 
  */
 exports.homeRoutes = (req, res) => {
-    // Make a get request to /api/lpg
+    // Membuat request 'ke /api/lpg
     axios.get('http://localhost:3000/api/lpg')
         .then(function(response){
-            // render the home page with the data from the database
+            // render home page dengan data dari database
             res.render('index', { lpg : response.data });
         })
         .catch(err =>{
@@ -20,6 +20,11 @@ exports.homeRoutes = (req, res) => {
         })
 }
 
+/**
+ * @description Route dan render page penjualan
+ * @param {*} req 
+ * @param {*} res 
+ */
 exports.penjualan_lpg = (req, res) =>{
     axios.get('http://localhost:3000/api/lpg')
         .then(function(response){
@@ -31,24 +36,24 @@ exports.penjualan_lpg = (req, res) =>{
 }
 
 /**
- * @description to render the input data page
+ * @description untuk render page input data 
  * @param {*} req 
  * @param {*} res 
  */
 exports.input_data = (req, res) =>{
-    // render the input_data page as a response
+    // render page input_data sebagai sebuah respons
     res.render('input_data');
 }
 
 /**
- * @description render the update data page
+ * @description render page update data
  * @param {*} req 
  * @param {*} res 
  */
 exports.update_data = (req, res) =>{
     axios.get('http://localhost:3000/api/lpg', { params : { id : req.query.id }})
         .then(function(elpijidata){
-            // render the update_data page with the data from the database
+            // render page update_data dengan data dari database
             res.render("update_data", { elpiji : elpijidata.data})
         })
         .catch(err =>{
