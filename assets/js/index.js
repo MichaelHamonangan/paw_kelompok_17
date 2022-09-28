@@ -31,7 +31,7 @@ $("#update_data").submit(function(event){
 })
 
 
-if(window.location.pathname == "/"){
+if(window.location.pathname == "/penjualan-lpg"){
     $ondelete = $(".table tbody td a.delete");
 
     // event listener untuk tombol delete
@@ -45,7 +45,7 @@ if(window.location.pathname == "/"){
         }
 
         // konfirmasi aksi delete
-        if(confirm("Do you really want to delete this record?")){
+        if(confirm("Apakah anda benar-benar ingin menghapus data ini?")){
             $.ajax(request).done(function(response){
                 alert("Data berhasil dihapus!");
                 
@@ -53,6 +53,5 @@ if(window.location.pathname == "/"){
                 location.reload();
             })
         }
-
     })
 }

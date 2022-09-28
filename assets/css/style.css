@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap');
 
-/*Semua syntax css untuk mengedit UI*/
+/*Syntax css untuk mengedit UI*/
 
 :root{
     --dark: #4C3957;
@@ -109,7 +109,7 @@ table{
 }
 
 .table td > a.btn{
-    padding: .3em 1em;
+    padding: .2em .2em;
     font-size: 1.1em;
     margin: 0 .2em;
 }

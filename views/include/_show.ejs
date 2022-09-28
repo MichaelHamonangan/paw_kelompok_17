@@ -1,5 +1,6 @@
 <% for(var i = 0; i < lpg.length; i++) { %>
 <tr>
+    <!-- menampilkan data dari database-->
     <td><%= i + 1 %></td>
     <td><%= lpg[i].tanggal %></td>
     <td><%= lpg[i].kode %></td>
@@ -9,6 +10,7 @@
     <td><%= lpg[i].tabung_tunai %></td>
     <td><%= lpg[i].bayar_transfer %></td>
     <td><%= lpg[i].bayar_tunai %></td>
+    <!-- tombol update dan delete-->
     <td>
         <a href="/update-data?id=<%= lpg[i]._id%>" class="btn border-shadow update">
             <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
