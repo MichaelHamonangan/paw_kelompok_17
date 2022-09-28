@@ -1,5 +1,3 @@
-
-
 // event listener for the form with id "input-data"
 $("#input_data").submit(function(event){
     alert("Data Inserted Successfully!");

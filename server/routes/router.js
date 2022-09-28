@@ -19,6 +19,12 @@ route.get('/input-data', services.input_data)
 
 /**
  *  @description Routing for update elpiji page
+ *  @method GET /penjualan-lpg
+ */
+ route.get('/penjualan-lpg', services.penjualan_lpg)
+
+/**
+ *  @description for update elpiji
  *  @method GET /update-data
  */
 route.get('/update-data', services.update_data)

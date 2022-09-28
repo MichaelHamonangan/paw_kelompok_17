@@ -18,8 +18,16 @@ exports.homeRoutes = (req, res) => {
         .catch(err =>{
             res.send(err);
         })
+}
 
-    
+exports.penjualan_lpg = (req, res) =>{
+    axios.get('http://localhost:3000/api/lpg')
+        .then(function(response){
+            res.render('penjualan_lpg', { lpg : response.data });
+        })
+        .catch(err =>{
+            res.send(err);
+        })
 }
 
 /**
