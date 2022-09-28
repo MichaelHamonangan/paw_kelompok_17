@@ -1,6 +1,12 @@
 const { Date } = require('mongoose');
 const mongoose = require('mongoose');
 
+/**
+ * @description Mongoose schema
+ * @return mongoose.Schema
+ * @example this is an example to use the schema for mongoose model:
+ * const LPG = mongoose.model('database_model_name', schema)
+ */
 var schema = new mongoose.Schema({
     tanggal : {
         type : Date
@@ -20,6 +26,10 @@ var schema = new mongoose.Schema({
     bayar_tunai : Number,
 })
 
+/** 
+ * @description Mongoose model with name 'userdb' and schema 'schema'
+ * 
+ */ 
 const Elpijidb = mongoose.model('userdb', schema);
 
 module.exports = Elpijidb;
