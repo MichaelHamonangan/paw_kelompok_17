@@ -109,7 +109,7 @@ table{
 }
 
 .table td > a.btn{
-    padding: .3em 1em;
+    padding: .2em .2em;
     font-size: 1.1em;
     margin: 0 .2em;
 }
