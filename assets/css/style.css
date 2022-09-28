@@ -3,8 +3,9 @@
 /*Syntax css untuk mengedit UI*/
 
 :root{
-    --dark: #4C3957;
-    --light: #70A37F;
+    --dark: #1C6758;
+    --light: #3D8361;
+    --pop: #EEF2E6;
     --border: #dee2e6;
     --border-btn: #edf2f4;
 }
@@ -64,20 +65,24 @@ a {
     color: var(--light);
 }
 
+.text-pop{
+    color: var(--pop);
+}
+
 .align_right{
     float : right
 }
 
 
 .text-gradient{
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    background: linear-gradient(to right, #3c835a, #134e30);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 #header nav{
-    background-color: #FEDE70;
+    background-color: #EEF2E6;
     padding: 1em 0;
     width: 100%;
 }
@@ -115,7 +120,7 @@ table{
 }
 
 .table tr:hover{
-    background-color:#FEDE70 ;
+    background-color:#badca9 ;
 }
 
 .table tr:hover td > a{
@@ -132,7 +137,7 @@ table{
     display: block;
     width: 100%;
     border: none;
-    background-color: #a0dbd2;
+    background-color: #1C6758;
     padding: 14px 28px;
     font-size: 16px;
     cursor: pointer;
@@ -140,7 +145,7 @@ table{
   }
 
 .block:hover {
-  background-color: #8eecf3;
+  background-color: #55b486;
   color: black;
 }
 
@@ -243,7 +248,7 @@ table{
 #input_data .form-group .btn{
     width: 100%;
     padding: .9em 1em;
-    background-color:#41658A; 
+    background-color:#55b486; 
     border: none;
     font-family: 'PT Sans', sans-serif;
     font-size: 1em;
@@ -254,6 +259,6 @@ table{
 
 #update_data .form-group .btn:hover,
 #input_data .form-group .btn:hover{
-    background-color: var(--dark);
+    background-color: #1C6758;
     color: var(--border);
 }
