@@ -17,6 +17,12 @@ route.get('/', services.homeRoutes);
 route.get('/input-data', services.input_data)
 
 /**
+ *  @description add lpg
+ *  @method GET /penjualan-lpg
+ */
+ route.get('/penjualan-lpg', services.penjualan_lpg)
+
+/**
  *  @description for update elpiji
  *  @method GET /update-data
  */
