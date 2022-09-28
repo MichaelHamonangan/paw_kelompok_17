@@ -1,14 +1,19 @@
-var Elpijidb = require('../model/model');
+// import elpiji model
+const Elpijidb = require('../model/model');
 
-// create and save new elpiji
+/**
+ * @description Create and save new elpiji data
+ * @param {*} req 
+ * @param {*} res 
+ */
 exports.create = (req,res)=>{
-    // validate request
+    // validate the request
     if(!req.body){
-        res.status(400).send({ message : "Content can not be emtpy!"});
+        res.status(400).send({ message : "Content can not be empty!"});
         return;
     }
 
-    // new elpiji
+    // create new elpiji
     const elpiji = new Elpijidb({
         tanggal : req.body.tanggal,
         kode : req.body.kode,
@@ -27,6 +32,7 @@ exports.create = (req,res)=>{
             //res.send(data)
             res.redirect('/input-data');
         })
+        // catch the error
         .catch(err =>{
             res.status(500).send({
                 message : err.message || "Some error occurred while creating a create operation"
@@ -35,7 +41,12 @@ exports.create = (req,res)=>{
 
 }
 
-// retrieve and return all lpg/ retrive and return a single elpiji
+/**
+ * @description Retrieve and return all lpg/ retrive and return a single elpiji
+ * @param {*} req 
+ * @param {*} res 
+ * @param req.query.id (optional)
+ */
 exports.find = (req, res)=>{
 
     if(req.query.id){
@@ -66,17 +77,26 @@ exports.find = (req, res)=>{
     
 }
 
-// Update a new idetified elpiji by elpiji id
+/**
+ * @description Update a new identified elpiji by elpiji id
+ * @param {*} req req.body Data cannot be empty
+ * @param {*} res 
+ */
 exports.update = (req, res)=>{
+    // check if body request is empty, if empty responds with error message
     if(!req.body){
         return res
             .status(400)
             .send({ message : "Data tidak boleh kosong"})
     }
 
+    // get the id from the request parameter
     const id = req.params.id;
+
+    // update the elpiji with id data from request params
     Elpijidb.findByIdAndUpdate(id, req.body, { useFindAndModify: false})
         .then(data => {
+            // if data is not found, send error message response, if data is found then respond witgh data
             if(!data){
                 res.status(404).send({ message : `Tidak dapat melakukan Update data dengan  ${id}!`})
             }else{
@@ -84,17 +104,26 @@ exports.update = (req, res)=>{
             }
         })
         .catch(err =>{
+            // if error, send error message response
+            // status 500 means internal server error
             res.status(500).send({ message : "Error dalam mengupdate informasi"})
         })
 }
 
-// Delete a elpiji with specified elpiji id in the request
+/**
+ * @description Delete an elpiji with specified elpiji id in the request parameter
+ * @param {*} req req.params.id needed to delete the spesific data
+ * @param {*} res 
+ */
 exports.delete = (req, res)=>{
     const id = req.params.id;
 
+    // delete the elpiji with id data from request params
     Elpijidb.findByIdAndDelete(id)
         .then(data => {
+            // if data is not found, send error message response, if data is found then send success message response
             if(!data){
+                // status 404 means not found
                 res.status(404).send({ message : `Cannot Delete with id ${id}. Maybe id is wrong`})
             }else{
                 res.send({
@@ -102,7 +131,10 @@ exports.delete = (req, res)=>{
                 })
             }
         })
+        // catch the error
         .catch(err =>{
+            // if error, send error message response
+            // status 500 means internal server error
             res.status(500).send({
                 message: "Tidak dapat menghapus data dengan id " + id
             });
