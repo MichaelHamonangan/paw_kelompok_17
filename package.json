@@ -1,7 +1,7 @@
 {
-  "name": "crud_app",
-  "version": "1.0.0",
-  "description": "crud application with express and mongodb",
+  "name": "paw_kelompok_17",
+  "version": "0.1.0",
+  "description": "A crud application using express as server and mongodb as database",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,7 @@
     "crud",
     "mongodb"
   ],
-  "author": "akshay kashyap",
+  "author": "17_PAW",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.0",
