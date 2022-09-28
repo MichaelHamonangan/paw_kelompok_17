@@ -41,6 +41,10 @@ a {
     text-align: center;
 }
 
+.border-plain{
+    border: 1px solid var(--border-btn);
+}
+
 .border-shadow{
     border: 1px solid var(--border-btn);
     box-shadow: 1px 3px 10px #e9ecef;
@@ -57,6 +61,11 @@ a {
 .text-light{
     color: var(--light);
 }
+
+.align_right{
+    float : right
+}
+
 
 .text-gradient{
     background: linear-gradient(to right, #8e2de2, #4a00e0);
@@ -115,6 +124,22 @@ table{
     color: #fff;
     background-color: var(--dark) ;
     border-color: #32383e;
+}
+
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #a0dbd2;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+.block:hover {
+  background-color: #8eecf3;
+  color: black;
 }
 
 @media only screen and (max-width: 1024px){

@@ -1,6 +1,3 @@
-
-
-
 $("#input_data").submit(function(event){
     alert("Data Inserted Successfully!");
 })
