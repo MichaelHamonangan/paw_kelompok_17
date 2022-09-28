@@ -1,8 +1,13 @@
 const mongoose = require('mongoose');
 
+/**
+ * @description Connect to MongoDB database
+ * @param {string} process.env.MONGO_URI
+ * @returns {object} mongoose.connection
+ */
 const connectDB = async () => {
     try{
-        // mongodb connection string
+        // connect to mongodb with mongodb connection string from .env file
         const con = await mongoose.connect(process.env.MONGO_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
