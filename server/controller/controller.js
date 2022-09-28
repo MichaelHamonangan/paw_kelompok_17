@@ -1,19 +1,19 @@
-// import elpiji model
+// import model
 const Elpijidb = require('../model/model');
 
 /**
- * @description Create and save new elpiji data
+ * @description membuat dan menyimpan data elpiji baru
  * @param {*} req 
  * @param {*} res 
  */
 exports.create = (req,res)=>{
-    // validate the request
+    // validasi request
     if(!req.body){
         res.status(400).send({ message : "Content can not be empty!"});
         return;
     }
 
-    // create new elpiji
+    // membuat data elpiji baru
     const elpiji = new Elpijidb({
         tanggal : req.body.tanggal,
         kode : req.body.kode,
@@ -25,14 +25,14 @@ exports.create = (req,res)=>{
         bayar_tunai : req.body.bayar_tunai
     })
 
-    // save elpiji in the database
+    // menyimpan data elpiji ke database
     elpiji
         .save(elpiji)
         .then(data => {
             //res.send(data)
             res.redirect('/input-data');
         })
-        // catch the error
+        // catch jika terjadi error
         .catch(err =>{
             res.status(500).send({
                 message : err.message || "Some error occurred while creating a create operation"
@@ -42,7 +42,7 @@ exports.create = (req,res)=>{
 }
 
 /**
- * @description Retrieve and return all lpg/ retrive and return a single elpiji
+ * @description Retrieve dan return semua lpg/ retrive dan return sebuah elpiji
  * @param {*} req 
  * @param {*} res 
  * @param req.query.id (optional)
@@ -78,62 +78,64 @@ exports.find = (req, res)=>{
 }
 
 /**
- * @description Update a new identified elpiji by elpiji id
- * @param {*} req req.body Data cannot be empty
+ * @description Update a data elpiji teridentifikasi dengan id
+ * @param {*} req req.body Data tidak dapat bernilai kosong
  * @param {*} res 
  */
 exports.update = (req, res)=>{
-    // check if body request is empty, if empty responds with error message
+    // cek jika body pada request kosong, jika kosong maka system akan meresepon dengan error message
     if(!req.body){
         return res
             .status(400)
             .send({ message : "Data tidak boleh kosong"})
     }
 
-    // get the id from the request parameter
+    // dapatkan id dari parameter request
     const id = req.params.id;
 
-    // update the elpiji with id data from request params
+    // update data elpiji dengan id dari parameter request
     Elpijidb.findByIdAndUpdate(id, req.body, { useFindAndModify: false})
         .then(data => {
-            // if data is not found, send error message response, if data is found then respond witgh data
+            // jika data tidak ditemukan, system akan mengirim respons berupa error message
+            // jika data ditemukan, maka system akan meresepon dengan data
             if(!data){
-                res.status(404).send({ message : `Tidak dapat melakukan Update data dengan  ${id}!`})
+                res.status(404).send({ message : `Tidak dapat melakukan Update data dengan id  ${id}!`})
             }else{
                 res.send(data)
             }
         })
         .catch(err =>{
-            // if error, send error message response
+            // jika error, system akan merespon dengan error message 
             // status 500 means internal server error
             res.status(500).send({ message : "Error dalam mengupdate informasi"})
         })
 }
 
 /**
- * @description Delete an elpiji with specified elpiji id in the request parameter
- * @param {*} req req.params.id needed to delete the spesific data
+ * @description Menghapus data elpiji dengan yang elpiji id telah dispesifikasi dalam parameter request
+ * @param {*} req req.params.id diperlukan untuk menghapus data spesifik
  * @param {*} res 
  */
 exports.delete = (req, res)=>{
     const id = req.params.id;
 
-    // delete the elpiji with id data from request params
+    // menghapus data elpiji dengan id dari parameter request 
     Elpijidb.findByIdAndDelete(id)
         .then(data => {
-            // if data is not found, send error message response, if data is found then send success message response
+            // jika data tidak ditemukan, system akan mengirim respons berupa error message
+            // jika data ditemukan, maka system akan merespon dengan success message
             if(!data){
                 // status 404 means not found
-                res.status(404).send({ message : `Cannot Delete with id ${id}. Maybe id is wrong`})
+                res.status(404).send({ message : `Tidak dapat menghapus data dengan id ${id}. Dimungkinkan adanya kesalahan id`})
             }else{
                 res.send({
-                    message : "Data telah sukses dihapus!"
+                    message : "Data telah berhasil dihapus!"
                 })
             }
         })
-        // catch the error
+        // catch jika terjadi error
         .catch(err =>{
-            // if error, send error message response
+            // jika error, system akan mengirim respons berupa error message
             // status 500 means internal server error
             res.status(500).send({
                 message: "Tidak dapat menghapus data dengan id " + id

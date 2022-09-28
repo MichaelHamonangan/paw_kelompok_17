@@ -1,31 +1,31 @@
-// event listener for the form with id "input-data"
+// event listener dari form "input-data"
 $("#input_data").submit(function(event){
     alert("Data Inserted Successfully!");
 })
 
-// event listener for the form with id "update-data"
+// event listener dari form "update-data"
 $("#update_data").submit(function(event){
-    // prevent the default submit behaviour
+    // Mencegah behaviour terkait default submit
     event.preventDefault();
 
     var unindexed_array = $(this).serializeArray();
     var data = {}
 
-    // mapping data from the form to the data object
+    // mapping data dari form ke objek data 
     $.map(unindexed_array, function(n, i){
         data[n['name']] = n['value']
     })
 
-    // create request with method put and url /api/lpg
+    // membuat request dengan method put dan url /api/lpg
     var request = {
         "url" : `http://localhost:3000/api/lpg/${data.id}`,
         "method" : "PUT",
         "data" : data
     }
 
-    // send the request to the server
+    // mengirim request ke server
     $.ajax(request).done(function(response){
-        alert("Data Updated Successfully!");
+        alert("Data berhasil diperbarui!");
     })
 
 })
@@ -34,22 +34,22 @@ $("#update_data").submit(function(event){
 if(window.location.pathname == "/"){
     $ondelete = $(".table tbody td a.delete");
 
-    // event listener for the delete button
+    // event listener untuk tombol delete
     $ondelete.click(function(){
         var id = $(this).attr("data-id")
 
-        // create request with method delete and url /api/lpg/:id
+        // membuat request dengan method delete dan url /api/lpg/:id
         var request = {
             "url" : `http://localhost:3000/api/lpg/${id}`,
             "method" : "DELETE"
         }
 
-        // confirm the delete action
+        // konfirmasi aksi delete
         if(confirm("Do you really want to delete this record?")){
             $.ajax(request).done(function(response){
-                alert("Data Deleted Successfully!");
+                alert("Data berhasil dihapus!");
                 
-                // reload the page
+                // memuat ulang halaman
                 location.reload();
             })
         }
