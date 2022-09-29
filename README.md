@@ -13,3 +13,5 @@ Anggota :
 5. Maria Anastasia - 20/460551/TK/51140
 
 .
+--DESKRIPSI--
+Apad CSM merupakan singkatan dari Aplikasi Administrasi PT Cahyo Sumber Migas. Apad CSM merupakan aplikasi berbasis web yang menggunakan berbagai teknologi seperti mongodb dan teknologi js seperti express dan node. Aplikasi ini membantu penjualan LPG (Liquefied Petroleum Gas) PT Cahyo Sumber Migas dengan cara mendata penjualan mulai dari pemasukan dan pengeluaran hingga pembayaran gas yang dilakukan oleh pelanggan. Aplikasi ini menggunakan bahasa pemrograman JavaScript, EJS, dan CSS. Apad CSM dijalankan dengan pertama menjalankan 'npm install' dilanjutkan dengan 'npm start' dan membuka aplikasi web lewat localhost.
