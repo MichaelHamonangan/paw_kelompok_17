@@ -1,8 +1,7 @@
 {
   "name": "paw_kelompok_17",
   "version": "0.1.0",
-  "description": "Apad CSM merupakan singkatan dari Aplikasi Administrasi PT Cahyo Sumber Migas. Apad CSM merupakan aplikasi berbasis web yang menggunakan berbagai teknologi seperti mongodb dan teknologi js seperti express dan node. Aplikasi ini membantu penjualan LPG (Liquefied Petroleum Gas) PT Cahyo Sumber Migas dengan cara mendata penjualan mulai dari pemasukan dan pengeluaran hingga pembayaran gas yang dilakukan oleh pelanggan. Aplikasi ini menggunakan bahasa pemrograman JavaScript, EJS, dan CSS. Apad CSM dijalankan dengan pertama menjalankan 'npm install' dilanjutkan dengan 'npm start' dan membuka aplikasi web lewat localhost.
-  ",
+  "description": "Apad CSM merupakan singkatan dari Aplikasi Administrasi PT CAHYO SUMBER MIGAS. Apad CSM merupakan aplikasi berbasis web yang menggunakan teknologi Mongodb serta teknologi Expressjs dan Nodejs. Aplikasi ini membantu penjualan LPG (Liquefied Petroleum Gas) PT CAHYO SUMBER MIGAS dengan cara mendata penjualan mulai dari pemasukan dan pengeluaran hingga pembayaran gas yang dilakukan oleh pelanggan. Aplikasi ini menggunakan bahasa pemrograman JavaScript, EJS, dan CSS.",  
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +9,7 @@
   },
   "keywords": [
     "crud",
-    "mongodb"
+    "mongodb",
     "ejs"
   ],
   "author": "17_PAW",
