@@ -28,3 +28,7 @@ npm start
 ```
 
 <p>dan membuka aplikasi web lewat localhost.</p>
+
+File :
+- __<a href="https://youtu.be/VdrGNo1SMMc">URL Video Presentasi</a>__
+- __<a href="https://www.canva.com/design/DAFNahzmyOQ/-PF7Z6vrAkRTGRLQJAQdHA/edit?utm_content=DAFNahzmyOQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">URL Slide Presentasi</a>__
