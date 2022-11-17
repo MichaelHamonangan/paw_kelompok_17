@@ -1,0 +1,62 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+<!-- Main Site -->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/penjualan-lpg"><i class="fas fa-angle-double-left"></i> Display Data</a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update Data</h2>
+            <span class="text-light">Gunakan form dibawah ini untuk mengupdate data</span>
+        </div>
+
+        <!-- form add elpiji  -->
+        <!-- form handling -->
+<form method="POST" id="update_data">
+    <div class="new_data">
+        <div class="form-group"> 
+            <label for="tanggal" class="text-light">Tanggal</label>
+            <input type="hidden" name="id" value="<%= elpiji._id %>">
+            <input type="text" name="tanggal" value="<%= elpiji.tanggal %>" placeholder="Contoh = 2022-11-27">
+        </div>
+        <div class="form-group">
+            <label for="kode" class="text-light">Kode</label>
+            <input type="text" name="kode" value="<%= elpiji.kode %>" placeholder="Dua huruf terakhir plat nomor kendaraan">
+        </div>
+        <div class="form-group">
+            <label for="nama" class="text-light">Nama Pangkalan</label>
+            <input type="text" name="nama" value="<%= elpiji.nama %>" placeholder="Contoh = Siswoyo">
+        </div>
+        <div class="form-group">
+            <label for="keterangan" class="text-light">Keterangan</label>
+            <input type="text" name="keterangan" value="<%= elpiji.keterangan %>" placeholder="Keterangan">
+        </div>
+        <div class="form-group">
+            <label for="Tabung" class="text-light">Jumlah Tabung</label>
+            <input type="number" name="tabung_transfer" value="<%= elpiji.tabung_transfer %>" placeholder="Cash-less">
+            <input type="number" name="tabung_tunai" value="<%= elpiji.tabung_tunai %>" placeholder="Tunai">
+        </div>
+        <div class="form-group">
+            <label for="Pembayaran" class="text-light">Pembayaran</label>
+            <input type="number" name="bayar_transfer" value="<%= elpiji.bayar_transfer %>" placeholder="Cash-less">
+            <input type="number" name="bayar_tunai" value="<%= elpiji.bayar_tunai %>" placeholder="Tunai">
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

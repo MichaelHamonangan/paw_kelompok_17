@@ -1,0 +1,55 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/"><i class="fas fa-angle-double-left"></i> Back to Dashboard</a>
+                </div>
+            </div>
+            <div class="align_right box-nav d-flex justify-between ">
+                <a href="/input-data" class="border-plain" >
+                    <span class="text-gradient" >Input Data</span>
+                </a>
+            </div>
+            <br />
+
+            <!-- form handling -->
+            <form action="/penjualan-lpg" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th rowspan="2">ID</th>
+                            <th rowspan="2">Tanggal</th>
+                            <th rowspan="2">Kode</th>
+                            <th rowspan="2">Nama Pangkalan</th>
+                            <th rowspan="2">Keterangan</th>
+                            <th colspan="2">Jumlah Tabung</th>
+                            <th colspan="2">Pembayaran</th>
+                            <th rowspan="2">Update</th>
+                            <th rowspan="2">Delete</th>
+                            <tr>
+                                <th>Cash-less</th>
+                                <th>Tunai</th>
+                                <th>Cash-less</th>
+                                <th>Tunai</th>
+                            </tr>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('include/_show') %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+<!-- /Main Site -->
+
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
