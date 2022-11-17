@@ -21,7 +21,7 @@ function Sales(){
 
     return (
         <main id="site-main">
-             <SalesBody salesData={salesData}/>
+            <SalesBody salesData={salesData}/>
         </main>
     );
 }
