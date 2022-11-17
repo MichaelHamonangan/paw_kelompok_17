@@ -8,7 +8,7 @@ function Sales(){
     
     useEffect(() => {
         if (salesData.length <= 0){
-            fetch("http://localhost:3000/api/lpg")
+            fetch("http://localhost:5000/api/lpg")
                 .then((response) => response.json())
                 .then((data) => {
                     setSalesData(data);
