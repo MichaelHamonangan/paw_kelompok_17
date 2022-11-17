@@ -2,7 +2,9 @@
  * @description untuk membuat request dengan mengoper confiq yang relevan ke axios
  */
 const axios = require('axios');
-
+const dotenv = require('dotenv');
+dotenv.config( { path : 'config.env'} )
+const PORT = process.env.PORT || 5000
 /**
  * @description Route dan render home page
  * @param {*} req 
@@ -10,7 +12,11 @@ const axios = require('axios');
  */
 exports.homeRoutes = (req, res) => {
     // Membuat request 'ke /api/lpg
+<<<<<<< Updated upstream
     axios.get('http://localhost:3000/api/lpg')
+=======
+    axios.get(`http://localhost:${PORT}/api/lpg`)
+>>>>>>> Stashed changes
         .then(function(response){
             // render home page dengan data dari database
             res.render('index', { lpg : response.data });
@@ -26,7 +32,11 @@ exports.homeRoutes = (req, res) => {
  * @param {*} res 
  */
 exports.penjualan_lpg = (req, res) =>{
+<<<<<<< Updated upstream
     axios.get('http://localhost:3000/api/lpg')
+=======
+    axios.get(`http://localhost:${PORT}/api/lpg`)
+>>>>>>> Stashed changes
         .then(function(response){
             res.render('penjualan_lpg', { lpg : response.data });
         })
@@ -51,7 +61,11 @@ exports.input_data = (req, res) =>{
  * @param {*} res 
  */
 exports.update_data = (req, res) =>{
+<<<<<<< Updated upstream
     axios.get('http://localhost:3000/api/lpg', { params : { id : req.query.id }})
+=======
+    axios.get(`http://localhost:${PORT}/api/lpg`, { params : { id : req.query.id }})
+>>>>>>> Stashed changes
         .then(function(elpijidata){
             // render page update_data dengan data dari database
             res.render("update_data", { elpiji : elpijidata.data})

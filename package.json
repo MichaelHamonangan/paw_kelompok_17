@@ -5,7 +5,14 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< Updated upstream
     "start": "nodemon server.js"
+=======
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+>>>>>>> Stashed changes
   },
   "keywords": [
     "crud",
@@ -15,9 +22,15 @@
   "author": "17_PAW",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-regular-svg-icons": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@types/qs": "^6.9.7",
     "axios": "^0.21.4",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.8",
     "express": "^4.17.1",
