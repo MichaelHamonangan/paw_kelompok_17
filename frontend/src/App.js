@@ -2,19 +2,21 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Header from './components/Header';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Dashboard/Dashboard';
 import Login from './pages/Login';
 import Home from './pages/Home/Home' ;
 import Register from './pages/Register';
+import Sidebar from './components/Sidebar/Sidebar'
 
 function App() {
   return (
     <>
       <Router>
         <div className='container'>
+          <Sidebar />
           <Header />
           <Routes>
-            {/* <Route path='/' element={<Home />} /> */}
+            <Route path='/' element={<Home />} />
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />

@@ -1,6 +1,8 @@
 import React from "react";
 
-import Illustration from "../../shared/Logo/Illustration";
+// import Illustration from "./../Logo/Illustration";
+// import Illustration from "../../Logo/Illustration";
+import Illustration from "../../components/Logo/Illustration.jsx";
 
 import image from "./ilustrasi-home.png";
 
