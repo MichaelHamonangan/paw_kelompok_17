@@ -20,11 +20,11 @@ function SidebarBody(){
                 linkTo='/penjualan-lpg'
                 title='Penjualan'
             />
-            <SidebarBodyItem 
+            {/* <SidebarBodyItem 
                 faIcon={faUser}
                 linkTo='/user'
                 title='Pengguna'
-            />
+            /> */}
         </nav>
     );
 }

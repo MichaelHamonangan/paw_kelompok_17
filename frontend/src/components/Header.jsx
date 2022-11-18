@@ -2,17 +2,20 @@ import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../features/auth/authSlice'
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
 import Spinner from '../components/Spinner'
-import { toast } from 'react-toastify'
+// import { toast } from 'react-toastify'
 
 
 function Header() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const { user, isLoading, isError, isSuccess, message } = useSelector(
+    const { user, isLoading } = useSelector(
         (state) => state.auth
     )
+    // const { user, isLoading, isError, isSuccess, message } = useSelector(
+    //     (state) => state.auth
+    // )
 
     const onLogout = () => {
         dispatch(logout())
@@ -20,16 +23,16 @@ function Header() {
         navigate('/')
     }
 
-    useEffect(() => {
-        console.log(user)
-        if (isError) {
-            toast.error(message)
-        }
-        if (isSuccess || user) {
-            navigate('/')
-        }
-        dispatch(reset())
-    }, [user, isError, isSuccess, message, navigate, dispatch])
+    // useEffect(() => {
+    //     // console.log(user)
+    //     if (isError) {
+    //         toast.error(message)
+    //     }
+    //     if (isSuccess || user) {
+    //         navigate('/')
+    //     }
+    //     dispatch(reset())
+    // }, [user, isError, isSuccess, message, navigate, dispatch])
 
     if (isLoading) {
         return <Spinner />

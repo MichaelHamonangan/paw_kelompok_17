@@ -23,12 +23,6 @@ function DashboardItemList({ data }) {
             title="Penjualan"
             className='dashboard-item'
         />
-        <SidebarItem 
-            faIcon={faUser}
-            linkTo="/user"
-            title="Pengguna"
-            className='dashboard-item'
-        />
     </div>
   );
 }
