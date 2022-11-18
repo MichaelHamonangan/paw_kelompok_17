@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import Home from './pages/Home/Home' ;
 import Register from './pages/Register';
 import Sidebar from './components/Sidebar/Sidebar'
+import Sales from './pages/Sales/Sales';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
-            {/* <Route path='/penjualan-lpg'/> element={<Sales />}*/}
+            <Route path='/penjualan-lpg' element={<Sales />} />
           </Routes>
         </div>
       </Router>
