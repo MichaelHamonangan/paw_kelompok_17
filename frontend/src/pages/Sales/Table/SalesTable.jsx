@@ -1,7 +1,8 @@
 import React from "react";
-
 import SalesTableHead from "./SalesTableHead";
 import SalesTableBody from "./SalesTableBody";
+
+import "./Sales.scss";
 
 function SalesTable({salesData}){
 

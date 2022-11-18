@@ -158,16 +158,22 @@ table{
         display: block;
     }
 
-    thead tr{
+    table{
+        border: 1px solid #000000
+    }
+    thead 
+
+    tr{
         position: absolute;
         top: -9999px;
         left: -9999px;
+        border: 1px solid #000000;
     }
 
     tr { border: 1px solid var(--border);}
 
     td{
-        border: none;
+        border: 1px solid #000000;
         position: relative;
     }
 

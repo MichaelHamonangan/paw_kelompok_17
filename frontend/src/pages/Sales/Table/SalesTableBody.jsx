@@ -2,6 +2,8 @@ import React from "react";
 
 import SalesDataList from "./SalesDataList";
 
+import "./Sales.scss";
+
 function SalesTableBody({ salesData }){
     console.log(salesData);
 

@@ -1,9 +1,11 @@
 import React from "react";
 
+import "./Sales.scss";
+
 function SalesTableHead(){
 
     return (
-        <thead className="thead-dark">
+        <thead>
             <tr>
                 <th rowSpan="2">ID</th>
                 <th rowSpan="2">Tanggal</th>
