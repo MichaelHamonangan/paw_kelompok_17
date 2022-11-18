@@ -15,19 +15,23 @@ function Sales(){
     // )
     
     useEffect(() => {
+
         // if (isError) {
         //     console.log(message)
         // }
         if (!user) {
             navigate('/login')
         } else if (salesData.length <= 0){
+
             fetch("http://localhost:5000/api/lpg", {
                 method: 'GET',
                 mode: 'cors',
                 headers: {
                     'Content-Type': 'application/json',
+
                     'authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzM5OTJlNjZlMmVmNjQ3MDkwNjVlMiIsImlhdCI6MTY2ODczMzgwMSwiZXhwIjoxNjcxMzI1ODAxfQ.a9FQQWAVvWRa8ZPGQx6XVaTmZJWcGDYAhCyPqdQshVc`,
                     // 'authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzM5OTJlNjZlMmVmNjQ3MDkwNjVlMiIsImlhdCI6MTY2ODczMzgwMSwiZXhwIjoxNjcxMzI1ODAxfQ.a9FQQWAVvWRa8ZPGQx6XVaTmZJWcGDYAhCyPqdQshVc`,
+
                 }
             })
                 .then((response) => response.json())
@@ -44,7 +48,8 @@ function Sales(){
 
     return (
         <main id="site-main">
-            <SalesBody salesData={salesData}/>
+             <SalesBody salesData={salesData}/>
+            {/* <p>Tesssssssssssss</p> */}
         </main>
     );
 }
