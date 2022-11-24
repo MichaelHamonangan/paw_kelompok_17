@@ -5,8 +5,7 @@ import "./Sales.scss";
 function SalesTableHead(){
 
     return (
-        <div>
-            <thead >
+        <thead className="columnheader">
             <tr>
                 <th rowSpan="2">ID</th>
                 <th rowSpan="2">Tanggal</th>
@@ -25,7 +24,6 @@ function SalesTableHead(){
                     <th>Tunai</th>
                 </tr>
         </thead>
-        </div>
     );
 }
 
