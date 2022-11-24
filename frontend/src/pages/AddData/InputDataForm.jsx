@@ -1,8 +1,13 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { toast } from 'react-toastify'
+import { useSelector} from 'react-redux'
 // import Elpijidb from "../../../../backend/model/model";
 
+
 function InputDataForm(){
+
 
     const [formData, setFormData] = useState({
         tanggal: '',
@@ -14,6 +19,16 @@ function InputDataForm(){
         bayar_transfer: '',
         bayar_tunai: '',
     })
+    const navigate = useNavigate()
+    const { user } = useSelector((state) => state.auth)
+
+
+    useEffect(() => {
+        if (!user) {
+            navigate('/login')
+        }
+    }, [user, navigate]);
+
 
     const { tanggal, kode, nama, keterangan, tabung_transfer,tabung_tunai,bayar_transfer,bayar_tunai} = formData
 
@@ -22,6 +37,37 @@ function InputDataForm(){
         ...prevState,
         [e.target.name]: e.target.value,
         }))
+    }
+
+    const onSubmit = (e) => {
+        e.preventDefault()
+        if (tanggal, kode, nama, keterangan, tabung_transfer, tabung_tunai, bayar_transfer, bayar_tunai.trim().length === 0){
+            toast.error('Input value is empty')
+            return
+        } else {
+            let token = JSON.parse(localStorage.getItem('user'));
+            console.log(token.token)
+            fetch("http://localhost:5000/api/lpg", {
+                
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'authorization': `Bearer ${token.token}`,
+                },
+                body: JSON.stringify({
+                    tanggal: tanggal,
+                    kode: kode,
+                    nama: nama,
+                    keterangan: keterangan,
+                    tabung_transfer: tabung_transfer,
+                    tabung_tunai: tabung_tunai,
+                    bayar_transfer: bayar_transfer,
+                    bayar_tunai: bayar_tunai,
+                }),
+            });
+            
+        }
     }
 
     return (
@@ -61,7 +107,7 @@ function InputDataForm(){
                     </div>
         
                 <div className="form-group">
-                    <button type="submit" className="btn text-dark update">Save</button>
+                    <button type="submit" className="btn text-dark update" onClick={onSubmit}>Save</button>
                 </div>
         
             </div>
