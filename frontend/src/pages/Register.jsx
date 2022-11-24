@@ -44,7 +44,7 @@ function Register() {
 
     const onSubmit = (e) => {
         e.preventDefault()
-        if (name, email, password, password2.trim().length === 0){
+        if (name === "" || email === "" || password === "" || password2 === ""){
             toast.error('Input value is empty')
             return
         }

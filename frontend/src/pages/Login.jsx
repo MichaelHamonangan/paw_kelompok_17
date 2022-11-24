@@ -41,8 +41,7 @@ function Login() {
 
     const onSubmit = (e) => {
         e.preventDefault()
-        e.preventDefault()
-        if (email, password.trim().length === 0){
+        if (email === "" || password === ""){
             toast.error('Input value is empty')
             return
         }

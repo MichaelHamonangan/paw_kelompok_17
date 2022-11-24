@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom'
-import { useSelector} from 'react-redux'
+import { useSelector } from 'react-redux'
 // import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 // import AddData from '../pages/AddData/AddData'
 
@@ -25,7 +25,6 @@ function Sales(){
         } else if (salesData.length <= 0){
             // const token = thunkAPI.getState().auth.user.token
             let token = JSON.parse(localStorage.getItem('user'));
-            console.log("test"+token.token)
 
             fetch("http://localhost:5000/api/lpg", {
                 
