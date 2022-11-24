@@ -24,7 +24,7 @@ function App() {
                 <Home />
               </>
             }/>
-
+          {/* <Route path='*' element={<PageNotFound />}></Route> */}
             <Route path='/dashboard' element={
               <>
               <Sidebar />
