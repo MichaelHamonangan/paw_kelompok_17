@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 // import Illustration from "./../Logo/Illustration";
 // import Illustration from "../../Logo/Illustration";
@@ -9,6 +11,13 @@ import image from "./ilustrasi-home.png";
 import "./Home.scss";
 
 function Home(){
+    const navigate = useNavigate()
+    const { user } = useSelector((state) => state.auth)
+
+    useEffect(() => {
+        if (!user) navigate('/login')
+    });
+
     return (
         <main id="site-main">
             <div className="container">
