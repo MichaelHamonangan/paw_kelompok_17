@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { toast } from 'react-toastify'
 
 const API_URL = 'http://localhost:5000/api/'
 
@@ -55,7 +56,13 @@ const login = async (userData) => {
         return response.data
     })
     .catch(function (error) {
-        console.log(error);
+        if(error.response){
+            console.log(error.response.data);
+            toast.error('Invalid Credentials');
+            return
+        } 
+        // toast.error(error)
+        // console.log(error);
     });
 }
 
