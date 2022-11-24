@@ -2,6 +2,8 @@ import React from "react";
 
 import SalesTable from "./Table/SalesTable";
 
+import "./Table/Sales.scss";
+
 function SalesBody(salesData){
 
     return (
@@ -10,7 +12,8 @@ function SalesBody(salesData){
             </div>
             <div className="align_right box-nav d-flex justify-between">
                 <a href="/input-data" className="border-plain" >
-                    <span className="text-gradient" >Input Data</span>
+                    <button class="button is-primary is-responsive">Input Data</button>
+                    {/* <span className="text-gradient" >Input Data</span> */}
                 </a>
             </div>
             <br />

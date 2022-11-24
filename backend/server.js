@@ -34,16 +34,7 @@ app.use('/img', express.static(path.resolve(__dirname, "assets/img")))
 app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 
 // load routers
-<<<<<<<< HEAD:backend/server.js
 app.use('/', require('./routes/router'))
 app.use('/api/users', require('./routes/router'));
-========
-<<<<<<< Updated upstream:server.js
-app.use('/', require('./backend/routes/router'))
-=======
-app.use('/', require('./routes/router'))
-app.use('/api/users', require('./routes/router'));
->>>>>>> Stashed changes:backend/server.js
->>>>>>>> 4cc030290811d73630de469cca3f0f667ae15b02:server.js
 
 app.listen(PORT, ()=> { console.log(`Server is running on http://localhost:${PORT}`)});
