@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom'
 import { useSelector} from 'react-redux'
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+// import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 // import AddData from '../pages/AddData/AddData'
 
 import SalesBody from "./SalesBody";
@@ -24,6 +24,8 @@ function Sales(){
             navigate('/login')
         } else if (salesData.length <= 0){
             // const token = thunkAPI.getState().auth.user.token
+            let token = JSON.parse(localStorage.getItem('user'));
+            console.log("test"+token.token)
 
             fetch("http://localhost:5000/api/lpg", {
                 
@@ -32,8 +34,8 @@ function Sales(){
                 headers: {
                     'Content-Type': 'application/json',
 
-                    'authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzM5OTJlNjZlMmVmNjQ3MDkwNjVlMiIsImlhdCI6MTY2ODczMzgwMSwiZXhwIjoxNjcxMzI1ODAxfQ.a9FQQWAVvWRa8ZPGQx6XVaTmZJWcGDYAhCyPqdQshVc`,
-                    // 'authorization': `Bearer ${token}`,
+                    // 'authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzM5OTJlNjZlMmVmNjQ3MDkwNjVlMiIsImlhdCI6MTY2ODczMzgwMSwiZXhwIjoxNjcxMzI1ODAxfQ.a9FQQWAVvWRa8ZPGQx6XVaTmZJWcGDYAhCyPqdQshVc`,
+                    'authorization': `Bearer ${token.token}`,
 
                 }
             })
