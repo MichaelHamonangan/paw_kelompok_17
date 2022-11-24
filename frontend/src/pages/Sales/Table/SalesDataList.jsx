@@ -4,9 +4,6 @@ import { faPencilAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import "./Sales.scss";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPencilAlt, faTimes } from '@fortawesome/free-solid-svg-icons'; 
-
 function SalesDataList({sales, count, updateLink}){
 
     return (
