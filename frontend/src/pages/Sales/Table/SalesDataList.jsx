@@ -1,4 +1,8 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPencilAlt, faTimes } from '@fortawesome/free-solid-svg-icons'; 
+
+import "./Sales.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencilAlt, faTimes } from '@fortawesome/free-solid-svg-icons'; 
@@ -25,7 +29,11 @@ function SalesDataList({sales, count, updateLink}){
             </td>
             <td>
                 <div className="btn border-shadow delete" data-id={sales._id} >
-                    <span className="text-gradient"><FontAwesomeIcon icon={faTimes} color="#000"/></span>
+
+                    <span className="text-gradient">
+                        <FontAwesomeIcon icon={faTimes} color="#000"/>
+                    </span>
+
                 </div>
             </td>
         </tr>

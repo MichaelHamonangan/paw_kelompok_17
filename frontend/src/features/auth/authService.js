@@ -18,7 +18,7 @@ const register = async (userData) => {
             "Content-Type":"application/x-www-form-urlencoded"
         }
     }
-    console.log("data " + userData)
+    // console.log("data " + userData)
     await axios
     .post(API_URL + "register", userData, config)
     .then(function (response) {
@@ -46,7 +46,7 @@ const login = async (userData) => {
             "Content-Type":"application/x-www-form-urlencoded"
         }
     }
-    console.log("data " + userData)
+    // console.log("data " + userData)
     await axios
     .post(API_URL + "login", userData, config)
     .then(function (response) {
