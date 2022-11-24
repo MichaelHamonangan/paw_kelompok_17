@@ -28,17 +28,21 @@ exports.create = (req,res)=>{
     // menyimpan data elpiji ke database
     elpiji
         .save(elpiji)
-        .then(data => {
-            //res.send(data)
-            res.redirect('/input-data');
+        // console.log(elpiji)
+        .then(elpiji => {
+            console.log("test" + elpiji)
+            res.status(200).send({
+                status : 200,
+                message : "Create elpiji data success"
+            })
         })
         // catch jika terjadi error
         .catch(err =>{
+            console.log("error" + err)
             res.status(500).send({
                 message : err.message || "Some error occurred while creating a create operation"
             });
         });
-
 }
 
 /**

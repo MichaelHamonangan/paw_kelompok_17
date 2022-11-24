@@ -41,19 +41,19 @@ function InputDataForm(){
 
     const onSubmit = (e) => {
         e.preventDefault()
-        if (tanggal, kode, nama, keterangan, tabung_transfer, tabung_tunai, bayar_transfer, bayar_tunai.trim().length === 0){
+        console.log("test")
+        if (tanggal, kode, nama, keterangan.trim().length === 0){
             toast.error('Input value is empty')
             return
         } else {
-            let token = JSON.parse(localStorage.getItem('user'));
-            console.log(token.token)
+            let localUser = JSON.parse(localStorage.getItem('user'));
+            console.log(localUser.token);
             fetch("http://localhost:5000/api/lpg", {
-                
                 method: 'POST',
                 mode: 'cors',
                 headers: {
                     'Content-Type': 'application/json',
-                    'authorization': `Bearer ${token.token}`,
+                    'authorization': `Bearer ${localUser.token}`,
                 },
                 body: JSON.stringify({
                     tanggal: tanggal,
@@ -71,7 +71,7 @@ function InputDataForm(){
     }
 
     return (
-        <form action="/api/lpg" method="POST" id="input_data">
+        <form onSubmit={onSubmit}>
             <div className="new_data">
                 <div className="form-group">
                     <label htmlFor="tanggal" className="text-light">Tanggal</label>
