@@ -14,7 +14,6 @@ function Dashboard() {
                 image={image}
                 imgAlt="Dashboard"
                 illustrationClass="page-illustration"
-                title="Dashboard"
             />
             <p>Selamat datang di Dashboard Aplikasi Cahyo Sumber Migas!</p>
             <DashboardItemList />

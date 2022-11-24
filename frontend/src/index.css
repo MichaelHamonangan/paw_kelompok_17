@@ -9,6 +9,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
+  background-color: #f5f5f5;
 }
 
 a {
@@ -168,17 +169,17 @@ h3 {
 }
 
 .btn-block {
+  color: #000000;
   width: 100%;
   margin-bottom: 20px;
 }
 
 .btn:hover {
+  color: #00C95C;
   transform: scale(0.98);
   background: #001F0E;
   transition: all 0.4s ease;
-  /* svg, span {
-      color: #00FF75;
-  } */
+  
 }
 
 .loadingSpinnerContainer {
@@ -224,4 +225,8 @@ h3 {
   .heading p {
     font-size: 1.5rem;
   }
+}
+
+.ui_content{
+  padding-left: 55px;
 }

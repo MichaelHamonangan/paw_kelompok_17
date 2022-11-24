@@ -16,7 +16,6 @@ function Home(){
                     image={image}
                     imgAlt="Say hello illustration"
                     illustrationClass="page-illustration"
-                    title="Beranda"
                 />
                 <p>Selamat datang di Apad CSM!</p>
             </div>
