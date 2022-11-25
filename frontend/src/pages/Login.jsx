@@ -7,6 +7,8 @@ import { login, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
 import qs from 'qs'
 
+import "../index.css"
+
 function Login() {
     const [formData, setFormData] = useState({
         email: '',

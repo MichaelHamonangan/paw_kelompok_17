@@ -85,6 +85,12 @@ h3 {
 
 .heading p {
   color: #828282;
+  font-size: 1rem;
+}
+
+.heading h1 {
+  color: #828282;
+  font-size: 2rem;
 }
 
 .goals {
@@ -219,11 +225,11 @@ h3 {
   }
 
   .heading h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .heading p {
-    font-size: 1.5rem;
+    font-size: 0.75rem;
   }
 }
 
