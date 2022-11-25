@@ -10,6 +10,7 @@ import Register from './pages/Register';
 import Sidebar from './components/Sidebar/Sidebar'
 import Sales from './pages/Sales/Sales';
 import UpdateSales from './pages/Sales/UpdateSales';
+import Error404 from './pages/Error404';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
                 <Home />
               </>
             }/>
-          {/* <Route path='*' element={<PageNotFound />}></Route> */}
+          <Route path='*' element={<Error404 />}></Route>
             <Route path='/dashboard' element={
               <>
               <Sidebar />

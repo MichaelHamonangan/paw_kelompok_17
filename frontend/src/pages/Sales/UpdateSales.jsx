@@ -14,7 +14,6 @@ import qs from 'qs'
 const UpdateSales = () => {
     const { id } = useParams()
     const { user } = useSelector((state) => state.auth)
-    // const [id, setId] = useState(useParams())
     const [formData, setFormData] = useState({
         tanggal: '',
         kode: '',
@@ -26,6 +25,29 @@ const UpdateSales = () => {
         bayar_tunai: '',
     })
     const navigate = useNavigate()
+    
+
+    const getData = () => {
+        if (!user) {
+            navigate('/login')
+        } else {
+            axios
+                .get(`http://localhost:5000/api/lpg/?id=${id}`, config)
+                .then(function (response) {
+                    if (response.status === 200) {
+                        console.log(response.data)
+                        toast.success(response.message)
+                        setFormData(response.data)
+                    } else {
+                        toast.error("Error")
+                    }
+                })
+                .catch(function (error) {
+                    toast.error(error);
+                });
+        }
+        
+    }
     const localUser = JSON.parse(localStorage.getItem('user'));
         const config = {
             headers: {
@@ -33,23 +55,6 @@ const UpdateSales = () => {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
         };
-
-    const getData = () => {
-        axios
-            .get(`http://localhost:5000/api/lpg/?id=${id}`, config)
-            .then(function (response) {
-                if (response.status === 200) {
-                    console.log(response.data)
-                    toast.success(response.message)
-                    setFormData(response.data)
-                } else {
-                    toast.error("Error")
-                }
-            })
-            .catch(function (error) {
-                toast.error(error);
-            });
-    }
 
     useEffect(() => {   
         if (!user) {
