@@ -11,6 +11,7 @@ const app = express();
 
 dotenv.config( { path : 'config.env'} )
 const PORT = process.env.PORT || 5000
+const HOST = process.env.NODE_ENV !== "production" ? "localhost" : "0.0.0.0"
 
 // log requests
 app.use(morgan('tiny'));
@@ -37,4 +38,4 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 app.use('/', require('./routes/router'))
 app.use('/api/users', require('./routes/router'));
 
-app.listen(PORT, ()=> { console.log(`Server is running on http://localhost:${PORT}`)});
+app.listen(PORT, ()=> { console.log(`Server is running on http://${HOST}:${PORT}`)});

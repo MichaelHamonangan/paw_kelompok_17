@@ -41,6 +41,10 @@ function Login() {
 
     const onSubmit = (e) => {
         e.preventDefault()
+        if (email === "" || password === ""){
+            toast.error('Input value is empty')
+            return
+        }
         var dataLogin = qs.stringify({
             'email': email,
             'password': password 
