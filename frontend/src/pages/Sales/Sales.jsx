@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom'
-import { useSelector} from 'react-redux'
+import { useSelector } from 'react-redux'
+// import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 // import AddData from '../pages/AddData/AddData'
 
 import SalesBody from "./SalesBody";
@@ -22,16 +23,16 @@ function Sales(){
         if (!user) {
             navigate('/login')
         } else if (salesData.length <= 0){
+            // const token = thunkAPI.getState().auth.user.token
+            let localUser = JSON.parse(localStorage.getItem('user'));
 
             fetch("http://localhost:5000/api/lpg", {
+                
                 method: 'GET',
                 mode: 'cors',
                 headers: {
                     'Content-Type': 'application/json',
-
-                    'authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzM5OTJlNjZlMmVmNjQ3MDkwNjVlMiIsImlhdCI6MTY2ODczMzgwMSwiZXhwIjoxNjcxMzI1ODAxfQ.a9FQQWAVvWRa8ZPGQx6XVaTmZJWcGDYAhCyPqdQshVc`,
-                    // 'authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzM5OTJlNjZlMmVmNjQ3MDkwNjVlMiIsImlhdCI6MTY2ODczMzgwMSwiZXhwIjoxNjcxMzI1ODAxfQ.a9FQQWAVvWRa8ZPGQx6XVaTmZJWcGDYAhCyPqdQshVc`,
-
+                    'authorization': `Bearer ${localUser.token}`,
                 }
             })
                 .then((response) => response.json())
@@ -48,7 +49,7 @@ function Sales(){
 
     return (
         <main id="site-main">
-             <SalesBody salesData={salesData}/>
+            <SalesBody salesData={salesData}/>
             {/* <p>Tesssssssssssss</p> */}
         </main>
     );

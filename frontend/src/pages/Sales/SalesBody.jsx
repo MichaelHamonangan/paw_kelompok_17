@@ -12,7 +12,7 @@ function SalesBody(salesData){
             </div>
             <div className="align_right box-nav d-flex justify-between">
                 <a href="/input-data" className="border-plain" >
-                    <button class="button is-primary is-responsive">Input Data</button>
+                    <button className="button is-success ">Input Data</button>
                     {/* <span className="text-gradient" >Input Data</span> */}
                 </a>
             </div>
