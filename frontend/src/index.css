@@ -9,6 +9,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
+  background-color: #f5f5f5;
 }
 
 a {
@@ -47,9 +48,9 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #e6e6e6;
-  margin-bottom: 60px;
+  margin-bottom: 0px;
 }
 
 .header ul {
@@ -137,10 +138,7 @@ h3 {
 
 .btn {
   padding: 10px 20px;
-  border: 1px solid #000;
   border-radius: 5px;
-  background: #000;
-  color: #fff;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
@@ -149,6 +147,16 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: 50px;
+  background-color: #00C95C;
+  margin: 4px;
+  border: 3px #001F0E solid;
+  text-decoration: none;
+  border-radius: 10px;
 }
 
 .btn svg {
@@ -161,12 +169,17 @@ h3 {
 }
 
 .btn-block {
+  color: #000000;
   width: 100%;
   margin-bottom: 20px;
 }
 
 .btn:hover {
+  color: #00C95C;
   transform: scale(0.98);
+  background: #001F0E;
+  transition: all 0.4s ease;
+  
 }
 
 .loadingSpinnerContainer {
@@ -212,4 +225,8 @@ h3 {
   .heading p {
     font-size: 1.5rem;
   }
+}
+
+.ui_content{
+  padding-left: 55px;
 }
