@@ -64,15 +64,14 @@ function SalesDataList({sales, count, updateLink}){
             <td>{sales.bayar_transfer}</td>
             <td>{sales.bayar_tunai}</td>
             <td>
-                <a href={updateLink} className="btn border-shadow update">
+                <a href={updateLink} className="btnx border-shadow update">
                     <span className="text-gradient">
                         <FontAwesomeIcon icon={faPencilAlt} color="#000"/>
                     </span>
                 </a>
             </td>
             <td>
-                <div className="btn border-shadow delete" data-id={sales._id} onClick={()=>{ onSubmit(); }}>
-
+                <div className="btnx border-shadow delete" data-id={sales._id} onClick={()=>{ onSubmit(); }}>
                     <span className="text-gradient">
                         <FontAwesomeIcon icon={faTimes} color="#000"/>
                     </span>
