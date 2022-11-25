@@ -1,11 +1,14 @@
 import axios from 'axios'
+// import * as dotenv from 'dotenv'
 
 // import { useNavigate } from 'react-router-dom'
 // import { redirect } from 'react-router-dom'
 // import { toast } from 'react-toastify'
 
-const API_URL = 'http://localhost:5000/api/'
 
+// dotenv.config( { path : '../frontend/.env'} )
+// const baseURL = process.env.API_URL
+const API_URL = 'http://localhost:5000/api/'
 
 // Register user
 const register = async (userData) => {

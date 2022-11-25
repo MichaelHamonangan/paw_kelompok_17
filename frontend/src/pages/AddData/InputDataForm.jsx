@@ -70,7 +70,7 @@ function InputDataForm(){
                 .post('http://localhost:5000/api/lpg', data, config)
                 .then(function (response) {
                     if (response.status === 200) {
-                        toast.success(response.message)
+                        toast.success("Berhasil memasukkan data pada pangkalan " + nama)
                         navigate('/penjualan-lpg')
                     } else {
                         toast.error("Error")

@@ -9,6 +9,7 @@ import AddData from './pages/AddData/AddData' ;
 import Register from './pages/Register';
 import Sidebar from './components/Sidebar/Sidebar'
 import Sales from './pages/Sales/Sales';
+import UpdateSales from './pages/Sales/UpdateSales';
 
 function App() {
   return (
@@ -44,6 +45,13 @@ function App() {
               <>
                 <Sidebar />
                 <AddData />
+              </>
+            }/>
+
+            <Route path='/update-data/update/:id' element={
+              <>
+                <Sidebar />
+                <UpdateSales />
               </>
             }/>
 
