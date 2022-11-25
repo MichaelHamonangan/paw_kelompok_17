@@ -47,4 +47,4 @@ const saleservice = {
     deleteSales,
 }
 
-export default salesService
+export default saleservice
