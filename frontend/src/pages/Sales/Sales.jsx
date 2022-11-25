@@ -32,10 +32,7 @@ function Sales(){
                 mode: 'cors',
                 headers: {
                     'Content-Type': 'application/json',
-
-                    // 'authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzM5OTJlNjZlMmVmNjQ3MDkwNjVlMiIsImlhdCI6MTY2ODczMzgwMSwiZXhwIjoxNjcxMzI1ODAxfQ.a9FQQWAVvWRa8ZPGQx6XVaTmZJWcGDYAhCyPqdQshVc`,
                     'authorization': `Bearer ${token.token}`,
-
                 }
             })
                 .then((response) => response.json())

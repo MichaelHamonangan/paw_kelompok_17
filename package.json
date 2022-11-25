@@ -10,6 +10,11 @@
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "keywords": [
     "crud",
     "mongodb",
@@ -31,10 +36,12 @@
     "ejs": "^3.1.8",
     "express": "^4.17.1",
     "express-async-handler": "^1.2.0",
+    "fs": "0.0.1-security",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.11",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "os": "^0.1.2"
   },
   "devDependencies": {
     "css-loader": "^6.7.2"

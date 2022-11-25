@@ -1,6 +1,6 @@
 import React from "react";
 import SidebarBodyItem from "./SidebarBodyItem";
-import { faHome, faUser, faHandHoldingDollar, faDashboard } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faHandHoldingDollar, faDashboard } from "@fortawesome/free-solid-svg-icons";
 
 function SidebarBody(){
     return (
