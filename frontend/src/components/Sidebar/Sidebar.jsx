@@ -8,6 +8,7 @@ import SidebarBody from "./SidebarBody";
 import SidebarItem from "./SidebarBodyItem";
 import SidebarIllustration from "./SidebarIllustration";
 
+
 import image from "./lpg-gas-illustration.png";
 
 function Sidebar() {

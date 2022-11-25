@@ -26,11 +26,9 @@ function SalesDataList({sales, count, updateLink}){
             </td>
             <td>
                 <div className="btn border-shadow delete" data-id={sales._id} >
-
                     <span className="text-gradient">
                         <FontAwesomeIcon icon={faTimes} color="#000"/>
                     </span>
-
                 </div>
             </td>
         </tr>
