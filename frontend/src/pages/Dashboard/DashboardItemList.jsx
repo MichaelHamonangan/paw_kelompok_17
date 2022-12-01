@@ -2,7 +2,7 @@ import React from "react";
 import SidebarItem from "../../components/Sidebar/SidebarBodyItem";
 import {faHome, faDashboard, faHandHoldingDollar} from "@fortawesome/free-solid-svg-icons";
 
-function DashboardItemList({ data }) {
+function DashboardItemList({}) {
   return (
     <div className="dashboard-item-list">
         <SidebarItem 
