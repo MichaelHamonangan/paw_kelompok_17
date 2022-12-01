@@ -81,7 +81,7 @@ h3 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 50px;
-  padding: 0 20px;
+  padding-bottom: 15px;
 }
 
 .heading p {
@@ -245,5 +245,22 @@ h3 {
 
 .margin-null{
   margin: 0 !important;
+}
+
+.shadow-box {
+  /* display: flex; */
+  /* justify-content: center; */
+  width: 50%;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  /* padding: 4em; */
+  border-radius: 8px;
+  background-color: white;
+
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10%;
 }
 
