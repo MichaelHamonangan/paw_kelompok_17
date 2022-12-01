@@ -6,7 +6,7 @@ import { toast } from 'react-toastify'
 import { useSelector} from 'react-redux'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPencilAlt, faTimes } from '@fortawesome/free-solid-svg-icons'; 
+import { faPencilAlt, faTrash } from '@fortawesome/free-solid-svg-icons'; 
 
 import axios from 'axios'
 
@@ -64,19 +64,23 @@ function SalesDataList({sales, count, updateLink}){
             <td>{sales.bayar_transfer}</td>
             <td>{sales.bayar_tunai}</td>
             <td>
-                <a href={updateLink} className="btnx border-shadow update">
-                    <span className="text-gradient">
-                        <FontAwesomeIcon icon={faPencilAlt} color="#000"/>
-                    </span>
-                </a>
+                <form action="/penjualan-lpg" method="POST" >
+                    <a href={updateLink} className="btnx border-shadow">
+                        <span className="text-gradient">
+                            <FontAwesomeIcon icon={faPencilAlt} color="blue"/>
+                        </span>
+                    </a>
+                </form>
             </td>
             <td>
-                <div className="btnx border-shadow delete" data-id={sales._id} onClick={()=>{ onSubmit(); }}>
-                    <span className="text-gradient">
-                        <FontAwesomeIcon icon={faTimes} color="#000"/>
-                    </span>
+                <form action="/penjualan-lpg" method="POST" >
+                    <div className="btnx border-shadow" data-id={sales._id} onClick={()=>{ onSubmit(); }}>
+                        <span className="text-gradient">
+                            <FontAwesomeIcon icon={faTrash} color="maroon"/>
+                        </span>
 
-                </div>
+                    </div>
+                </form>
             </td>
         </tr>
     );

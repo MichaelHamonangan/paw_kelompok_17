@@ -4,11 +4,13 @@ import { useSelector } from 'react-redux'
 // import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 // import AddData from '../pages/AddData/AddData'
 
+import SalesHead from "./SalesHead";
 import SalesBody from "./SalesBody";
 
 
 function Sales(){
     const [salesData, setSalesData] = useState([]);
+    const [searchValue, setSearchValue] = useState("");
     const navigate = useNavigate()
     const { user } = useSelector((state) => state.auth)
     // const { sales, isLoading, isError, message } = useSelector(
@@ -38,7 +40,6 @@ function Sales(){
                 .then((response) => response.json())
                 .then((data) => {
                     setSalesData(data);
-                    console.log(data);
                     }
             );
 
@@ -46,11 +47,14 @@ function Sales(){
         }
     }, [user, salesData, navigate]);
     
+    const searchHandler = (event) => {
+        setSearchValue(event.target.value);
+    };
 
     return (
         <main id="site-main">
-            <SalesBody salesData={salesData}/>
-            {/* <p>Tesssssssssssss</p> */}
+            <SalesHead searchHandler={searchHandler}/>
+            <SalesBody salesData={salesData} searchValue={searchValue}/>
         </main>
     );
 }
