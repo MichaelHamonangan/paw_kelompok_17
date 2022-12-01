@@ -4,17 +4,15 @@ import SalesTableBody from "./SalesTableBody";
 
 import "./Sales.scss";
 
-function SalesTable({salesData}){
+function SalesTable({salesData, searchValue}){
 
     return (
         <div className="table_wrapper">
             <div className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth ">
-                <form action="/penjualan-lpg" method="POST" >
                     <table className="table">
                         <SalesTableHead />
-                        <SalesTableBody salesData={salesData.salesData}/>
+                        <SalesTableBody salesData={salesData} searchValue={searchValue}/>
                     </table>
-                </form>
             </div>
         </div>
     );

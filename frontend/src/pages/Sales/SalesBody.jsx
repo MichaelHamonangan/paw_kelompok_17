@@ -4,20 +4,11 @@ import SalesTable from "./Table/SalesTable";
 
 import "./Table/Sales.scss";
 
-function SalesBody(salesData){
+function SalesBody({salesData, searchValue}){
 
     return (
         <div className="container">
-            <div className="box-nav d-flex justify-between">
-            </div>
-            <div className="align_right box-nav d-flex justify-between">
-                <a href="/input-data" className="border-plain" >
-                    <button className="button is-success ">Input Data</button>
-                    {/* <span className="text-gradient" >Input Data</span> */}
-                </a>
-            </div>
-            <br />
-            <SalesTable salesData={salesData}/>
+            <SalesTable salesData={salesData} searchValue={searchValue}/>
         </div>
     );
 }
