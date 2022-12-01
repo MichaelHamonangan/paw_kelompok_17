@@ -24,7 +24,7 @@ function Sales(){
             navigate('/login')
         } else if (salesData.length <= 0){
             // const token = thunkAPI.getState().auth.user.token
-            let token = JSON.parse(localStorage.getItem('user'));
+            let localUser = JSON.parse(localStorage.getItem('user'));
 
             fetch("http://localhost:5000/api/lpg", {
                 
@@ -32,10 +32,7 @@ function Sales(){
                 mode: 'cors',
                 headers: {
                     'Content-Type': 'application/json',
-
-                    // 'authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNzM5OTJlNjZlMmVmNjQ3MDkwNjVlMiIsImlhdCI6MTY2ODczMzgwMSwiZXhwIjoxNjcxMzI1ODAxfQ.a9FQQWAVvWRa8ZPGQx6XVaTmZJWcGDYAhCyPqdQshVc`,
-                    'authorization': `Bearer ${token.token}`,
-
+                    'authorization': `Bearer ${localUser.token}`,
                 }
             })
                 .then((response) => response.json())

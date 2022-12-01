@@ -98,14 +98,15 @@ exports.update = (req, res)=>{
     const id = req.params.id;
 
     // update data elpiji dengan id dari parameter request
-    Elpijidb.findByIdAndUpdate(id, req.body, { useFindAndModify: false})
-        .then(data => {
+    Elpijidb
+        .findByIdAndUpdate(id, req.body, { useFindAndModify: false})
+        .then(elpiji => {
             // jika data tidak ditemukan, system akan mengirim respons berupa error message
             // jika data ditemukan, maka system akan meresepon dengan data
-            if(!data){
+            if(!elpiji){
                 res.status(404).send({ message : `Tidak dapat melakukan Update data dengan id  ${id}!`})
             }else{
-                res.send(data)
+                res.send(elpiji)
             }
         })
         .catch(err =>{
