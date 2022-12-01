@@ -19,7 +19,7 @@ function App() {
         <div className='container'>
           <Header />
           <Routes>
-            
+            <Route path='*' element={<Error404/>}/>
             <Route path='/' element={
               <>
                 <Sidebar />

@@ -238,3 +238,11 @@ h3 {
 }
 
 
+.image-med{
+ height: 360px;
+}
+
+.margin-null{
+  margin: 0 !important;
+}
+
