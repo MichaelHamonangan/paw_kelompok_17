@@ -8,7 +8,7 @@ function SalesTable({salesData}){
 
     return (
         <div className="table_wrapper">
-            <div className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <div className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth ">
                 <form action="/penjualan-lpg" method="POST" >
                     <table className="table">
                         <SalesTableHead />

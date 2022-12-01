@@ -7,6 +7,8 @@ import { login, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
 import qs from 'qs'
 
+import "../index.css"
+
 function Login() {
     const [formData, setFormData] = useState({
         email: '',
@@ -41,6 +43,10 @@ function Login() {
 
     const onSubmit = (e) => {
         e.preventDefault()
+        if (email === "" || password === ""){
+            toast.error('Input value is empty')
+            return
+        }
         var dataLogin = qs.stringify({
             'email': email,
             'password': password 

@@ -9,6 +9,8 @@ import AddData from './pages/AddData/AddData' ;
 import Register from './pages/Register';
 import Sidebar from './components/Sidebar/Sidebar'
 import Sales from './pages/Sales/Sales';
+import UpdateSales from './pages/Sales/UpdateSales';
+import Error404 from './pages/Error404';
 
 function App() {
   return (
@@ -17,14 +19,14 @@ function App() {
         <div className='container'>
           <Header />
           <Routes>
-            
+            <Route path='*' element={<Error404/>}/>
             <Route path='/' element={
               <>
                 <Sidebar />
                 <Home />
               </>
             }/>
-
+          <Route path='*' element={<Error404 />}></Route>
             <Route path='/dashboard' element={
               <>
               <Sidebar />
@@ -44,6 +46,13 @@ function App() {
               <>
                 <Sidebar />
                 <AddData />
+              </>
+            }/>
+
+            <Route path='/update-data/update/:id' element={
+              <>
+                <Sidebar />
+                <UpdateSales />
               </>
             }/>
 
