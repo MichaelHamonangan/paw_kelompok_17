@@ -24,7 +24,7 @@ function Sidebar() {
                 <FontAwesomeIcon icon={faBars} color="#000"/>
             </span>
             <SidebarIllustration image={image}/>
-            <SidebarBody opene={open}/>
+            <SidebarBody openStatus={open}/>{open}
         </div>
     );
 }
