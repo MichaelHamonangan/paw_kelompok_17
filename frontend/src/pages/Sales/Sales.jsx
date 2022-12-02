@@ -28,7 +28,7 @@ function Sales(){
             // const token = thunkAPI.getState().auth.user.token
             let localUser = JSON.parse(localStorage.getItem('user'));
 
-            fetch("http://localhost:5000/api/lpg", {
+            fetch("http://3.113.26.186:5000/api/lpg", {
                 
                 method: 'GET',
                 mode: 'cors',
