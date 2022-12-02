@@ -10,6 +10,7 @@ function SidebarItem({ faIcon, linkTo, title, className }) {
                 activeclassname="active" 
                 className={className?className:""}
                 to={linkTo}
+                // onClick={onClickHandler}
             >
                 <FontAwesomeIcon icon={faIcon} color="#000"/>
                 <span className="nav-bar__item-title">{title}</span>

@@ -7,7 +7,10 @@ function SidebarFooter({onLogoutHandler}) {
     return (
         <div className="sidebar-footer">
             <button type='submit' className='btn btn-block' onClick={onLogoutHandler}>
-                <FaSignOutAlt /> Logout
+                <FaSignOutAlt />
+                <span className="nav-bar__item-title">
+                    Logout
+                </span>
             </button>
         </div>
     );
