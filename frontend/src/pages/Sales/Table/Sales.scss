@@ -174,7 +174,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    overflow: hidden;
+    overflow: scroll;
 
     .sales-header {
         width: 100%;
@@ -202,6 +202,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
+        overflow: scroll;
     }
 }

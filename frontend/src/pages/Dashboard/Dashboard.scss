@@ -80,6 +80,11 @@
     }
 }
 
+#site-main > .container .dashboard-summary .dashboard-item-list {
+    top: 0;
+    padding-top: 0;
+}
+
 .page-illustration {
     display: flex;
     flex-direction: column;
@@ -207,7 +212,7 @@
                 .dashboard-item-list {
                     
                         top: 0;
-                        padding-top: 60%;
+                        padding-top: 0%;
                     
                 }
             }
