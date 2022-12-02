@@ -64,7 +64,43 @@
         }
 
         .table_wrapper {
-            overflow-x: auto;
+            overflow: auto;
+        }
+    }
+}
+
+#site-main {
+    > .container {
+        overflow: scroll;
+
+        .table_wrapper {
+            
+            height: 100%;
+            width: 100%;
+
+            * {
+                text-align: center;
+            }
+        }
+    }
+
+    .sales-header {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        left: 40px;
+
+        .sales-search {
+            flex-direction: row;
+            width: 60%;
+            height: 100%;
+            padding: 0.5em;
+            margin: 0.5em;
+            
         }
     }
 }
@@ -87,4 +123,8 @@
             padding: 10px;
             margin: 0 auto;
         }
+}
+
+.btnx:hover {
+    cursor: pointer;
 }

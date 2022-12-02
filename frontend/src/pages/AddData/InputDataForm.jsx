@@ -8,6 +8,7 @@ import { useSelector} from 'react-redux'
 import axios from 'axios'
 import qs from 'qs'
 
+import './InputDataForm.scss'
 
 
 function InputDataForm(){

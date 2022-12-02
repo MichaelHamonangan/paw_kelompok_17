@@ -10,6 +10,7 @@ body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
   background-color: #f5f5f5;
+  /* overflow: hidden; */
 }
 
 a {
@@ -80,11 +81,17 @@ h3 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 50px;
-  padding: 0 20px;
+  padding-bottom: 15px;
 }
 
 .heading p {
   color: #828282;
+  font-size: 1rem;
+}
+
+.heading h1 {
+  color: #828282;
+  font-size: 2rem;
 }
 
 .goals {
@@ -219,11 +226,11 @@ h3 {
   }
 
   .heading h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .heading p {
-    font-size: 1.5rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -231,4 +238,29 @@ h3 {
   padding-left: 55px;
 }
 
+
+.image-med{
+ height: 360px;
+}
+
+.margin-null{
+  margin: 0 !important;
+}
+
+.shadow-box {
+  /* display: flex; */
+  /* justify-content: center; */
+  width: 50%;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  /* padding: 4em; */
+  border-radius: 8px;
+  background-color: white;
+
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10%;
+}
 

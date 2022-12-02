@@ -13,30 +13,52 @@
     min-height: 500px;
     min-width: 60px;
     box-sizing: border-box;
+    transition: width 0.3s ease-in-out;
 
     * {
         box-sizing: border-box;
     }
 
-    .logo {
-        display: block;
-        padding: 8px 0;
-        box-sizing: border-box;
+    .sidebar-illustration {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin: 16px auto;
+        
+    
 
-        img {
+        .app-title {
             display: block;
-            width: 80%;
-            height: auto;
-            margin: 16px auto;
+            padding: auto 4px;
+            box-sizing: border-box;
+            text-align: center;
+            color: #F5F6F1;
+            font-size: 1.25rem;
+            font-weight: bold;
+            transition: font-size 0.15s ease-in-out;
+            
+            width: 75%;
         }
+    }
+}
 
-        &:hover {
-            background: #001F0E;
-            transition: all 0.4s ease;
-            svg, span {
-                color: #00FF75;
-            }
-        }
+.nav-bar-closed {
+    background: #00C95C;
+    width: 80px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    min-height: 500px;
+    min-width: 60px;
+    box-sizing: border-box;
+    transition: width 0.2s ease-in-out;
+
+    * {
+        box-sizing: border-box;
     }
 
     .sidebar-illustration {
@@ -50,23 +72,17 @@
 
         .app-title {
             display: block;
-            padding: auto 4px;
+            padding: 0px;
             box-sizing: border-box;
             text-align: center;
             color: #F5F6F1;
-            font-size: 1.25rem;
+            font-size: 0;
             font-weight: bold;
+            // display: none;
+            transition: font-size 0.15s ease-in-out;
             
             width: 75%;
         }
-    }
-
-    hr {
-        position: relative;
-        display: block;
-        width: 80px;
-        height: 2px;
-        color: #001F0E;
     }
 }
 
@@ -133,6 +149,7 @@ nav {
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
+        
 
         height: 48px;
         width: 80%;
@@ -160,15 +177,27 @@ nav {
             padding: 0px 8px;
             font-size: 14px;
             font-weight: 600;
-            color: #000;
-            transition: all 0.4s ease;
+            color: black;
+            transition: all 0.15s ease;
+
+        }
+
+        .nav-bar__item-title-closed{
+            // border: #000 2px solid;
+            text-align: start;
+            width: 0;
+            padding: 0px 0px;
+            font-size: 0;
+            font-weight: 600;
+            color: black;
+            transition: all 0.15s ease;
 
         }
 
         &:hover {
             background: #001F0E;
             transition: all 0.4s ease;
-            svg, span {
+            svg, p {
                 color: #00FF75;
             }
         }

@@ -80,7 +80,7 @@ function Register() {
     }
 
     return (
-        <>
+        <div className='shadow-box'>
         <section className='heading'>
             <h1>
             <FaUser /> Register
@@ -141,7 +141,7 @@ function Register() {
             </div>
             </form>
         </section>
-        </>
+        </div>
     )
 }
 

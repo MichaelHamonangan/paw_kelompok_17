@@ -3,6 +3,7 @@ const route = express.Router()                          // create router
 
 const services = require('../services/render');         // import services
 const controller = require('../controller/controller'); // import controller
+const summaryController = require('../controller/summaryController'); // import controller
 
 const { protect } = require('../middleware/authMiddleware')
 
@@ -60,6 +61,12 @@ route.put('/api/lpg/:id', protect, controller.update);
  * @param req.params.id
  */
 route.delete('/api/lpg/:id', protect, controller.delete);
+
+/**
+ * @description mengambil data untuk halaman dashboard
+ * @method GET /api/dashboard
+ */
+route.get('/api/dashboard', protect, summaryController.get);
 
 
 const {
