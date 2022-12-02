@@ -73,13 +73,6 @@ function SalesDataList({sales, count, updateLink}){
                 </form>
             </td>
             <td>
-<<<<<<< HEAD
-                <div className="btnx border-shadow delete" data-id={sales._id} onClick={()=>{ onSubmit(); }}>
-                    <span className="text-gradient">
-                        <FontAwesomeIcon icon={faTimes} color="#000"/>
-                    </span>
-                </div>
-=======
                 <form action="/penjualan-lpg" method="POST" >
                     <div className="btnx border-shadow" data-id={sales._id} onClick={()=>{ onSubmit(); }}>
                         <span className="text-gradient">
@@ -88,7 +81,6 @@ function SalesDataList({sales, count, updateLink}){
 
                     </div>
                 </form>
->>>>>>> d33faa418e899a8339c3c9f4e4952e71e8339c13
             </td>
         </tr>
     );
