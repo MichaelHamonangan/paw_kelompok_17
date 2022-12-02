@@ -5,7 +5,7 @@ import SidebarIllustration from "./SidebarIllustration";
 import { faHome, faHandHoldingDollar, faDashboard } from "@fortawesome/free-solid-svg-icons";
 import image from "./lpg-gas-illustration.png";
 
-function SidebarBody(){
+function SidebarBody({openStatus}){
     return (
         <div className="sidebar-body">
             <SidebarIllustration image={image}/>

@@ -143,7 +143,7 @@ function Register() {
             </div>
             </form>
         </section>
-        </>
+        </div>
     )
 }
 

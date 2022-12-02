@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-function SidebarItem({ faIcon, linkTo, title, className }) {
+function SidebarItem({ faIcon, linkTo, title, className, open=true}) {
     return (
             <NavLink 
                 exact='true' 
@@ -13,7 +13,7 @@ function SidebarItem({ faIcon, linkTo, title, className }) {
                 // onClick={onClickHandler}
             >
                 <FontAwesomeIcon icon={faIcon} color="#000"/>
-                <span className="nav-bar__item-title">{title}</span>
+                <p className={open?"nav-bar__item-title":"nav-bar__item-title-closed"}>{title}</p>
             </NavLink>
     );
 }

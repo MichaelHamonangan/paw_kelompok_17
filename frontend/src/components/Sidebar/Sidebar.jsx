@@ -1,8 +1,10 @@
 import React from "react";
+import { useState } from "react";
 
 import "./Sidebar.scss";
 
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
@@ -16,6 +18,10 @@ import SidebarFooter from "./SidebarFooter";
 import image from "./lpg-gas-illustration.png";
 
 function Sidebar() {
+    const [open, setopen] = useState(true)
+    const toggleOpen = () => {
+        setopen(!open)
+    }
 
     const navigate = useNavigate()
     const dispatch = useDispatch()

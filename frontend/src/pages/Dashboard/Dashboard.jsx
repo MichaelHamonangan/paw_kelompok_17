@@ -36,7 +36,7 @@ const Dashboard = () => {
       .get(`http://localhost:5000/api/dashboard`, config)
       .then(function (response) {
         if (response.status === 200) {
-          console.log(response.data)
+          // console.log(response.data)
           setSumTabungTunai(response.data.sumTabungTunai)
           setSumTabungTransfer(response.data.sumTabungTransfer)
           setSumBayarTunai(response.data.sumBayarTunai)
