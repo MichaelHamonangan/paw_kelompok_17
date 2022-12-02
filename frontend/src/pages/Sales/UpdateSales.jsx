@@ -35,7 +35,7 @@ const UpdateSales = () => {
                 .get(`http://localhost:5000/api/lpg/?id=${id}`, config)
                 .then(function (response) {
                     if (response.status === 200) {
-                        console.log(response.data)
+                        // console.log(response.data)
                         toast.success(response.message)
                         setFormData(response.data)
                     } else {

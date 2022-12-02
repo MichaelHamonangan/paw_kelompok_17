@@ -5,7 +5,7 @@ import SalesDataList from "./SalesDataList";
 import "./Sales.scss";
 
 function SalesTableBody({ salesData, searchValue }){
-    console.log(salesData);
+    // console.log(salesData);
 
     const filteredSalesData = salesData.filter((data) => {
         return (data.nama.toLowerCase().includes(searchValue.toLowerCase()) ||
