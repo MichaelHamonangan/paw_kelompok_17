@@ -22,7 +22,7 @@ const register = async (userData) => {
     .post(API_URL + "register", userData, config)
     .then(function (response) {
         localStorage.setItem('user', JSON.stringify(response.data))
-        console.log(response);
+        // console.log(response);
         return response.data
     })
     .catch(function (error) {
@@ -42,7 +42,7 @@ const login = (userData) => {
     .post(API_URL + "login", userData, config)
     .then((response) => {
         localStorage.setItem('user', JSON.stringify(response.data))
-        console.log(response);
+        // console.log(response);
         return Promise.resolve(response.data)
     })
     .catch(function (error) {
