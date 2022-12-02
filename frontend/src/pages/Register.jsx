@@ -72,7 +72,7 @@ function Register() {
 
             // register(dataRegister)
             dispatch(register(dataRegister))
-            // axios.post("http://localhost:5000/api/register", userData)
+            // axios.post("http://54.65.225.65:5000/api/register", userData)
         }
     }
 

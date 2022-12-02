@@ -8,7 +8,7 @@ import axios from 'axios'
 
 // dotenv.config( { path : '../frontend/.env'} )
 // const baseURL = process.env.API_URL
-const API_URL = 'http://localhost:5000/api/'
+const API_URL = 'http://54.65.225.65:5000/api/'
 
 // Register user
 const register = async (userData) => {

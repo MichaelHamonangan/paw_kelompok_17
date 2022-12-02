@@ -27,7 +27,7 @@ npm install
 npm start 
 ```
 
-<p>dan membuka aplikasi web lewat localhost.</p>
+<p>dan membuka aplikasi web lewat 54.65.225.65.</p>
 
 <h3>File :</h3>
 
