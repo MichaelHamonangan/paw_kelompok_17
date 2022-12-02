@@ -2,6 +2,7 @@ import image from './Dashboard/bingung.jpg'
 import SidebarItem from "../components/Sidebar/SidebarBodyItem";
 import {faHome} from "@fortawesome/free-solid-svg-icons";
 
+import "./Error404.scss";
 
 function Error404() {
     return (
