@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000
  */
 exports.homeRoutes = (req, res) => {
     // Membuat request 'ke /api/lpg
-    axios.get(`http://localhost:${PORT}/api/lpg`)
+    axios.get(`http://54.65.225.65:${PORT}/api/lpg`)
         .then(function(response){
             // render home page dengan data dari database
             res.render('index', { lpg : response.data });
@@ -28,7 +28,7 @@ exports.homeRoutes = (req, res) => {
  * @param {*} res 
  */
 exports.penjualan_lpg = (req, res) =>{
-    axios.get(`http://localhost:${PORT}/api/lpg`)
+    axios.get(`http://54.65.225.65:${PORT}/api/lpg`)
         .then(function(response){
             res.render('penjualan_lpg', { lpg : response.data });
         })
@@ -53,7 +53,7 @@ exports.input_data = (req, res) =>{
  * @param {*} res 
  */
 exports.update_data = (req, res) =>{
-    axios.get(`http://localhost:${PORT}/api/lpg`, { params : { id : req.query.id }})
+    axios.get(`http://54.65.225.65:${PORT}/api/lpg`, { params : { id : req.query.id }})
         .then(function(elpijidata){
             // render page update_data dengan data dari database
             res.render("update_data", { elpiji : elpijidata.data})

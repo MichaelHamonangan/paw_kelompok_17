@@ -1,5 +1,15 @@
 #site-main {
     .container {
-        overflow: scroll;
+        height: 100%;
+
+        form {
+            .new_data {
+                overflow: scroll;
+            }
+        }
     }
+}
+
+#root > .container #site-main > .container {
+    overflow: scroll;
 }

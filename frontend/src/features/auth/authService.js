@@ -8,7 +8,7 @@ import axios from 'axios'
 
 // dotenv.config( { path : '../frontend/.env'} )
 // const baseURL = process.env.API_URL
-const API_URL = 'http://localhost:5000/api/'
+const API_URL = 'http://54.65.225.65:5000/api/'
 
 // Register user
 const register = async (userData) => {
@@ -22,7 +22,7 @@ const register = async (userData) => {
     .post(API_URL + "register", userData, config)
     .then(function (response) {
         localStorage.setItem('user', JSON.stringify(response.data))
-        console.log(response);
+        // console.log(response);
         return response.data
     })
     .catch(function (error) {
@@ -42,7 +42,7 @@ const login = (userData) => {
     .post(API_URL + "login", userData, config)
     .then((response) => {
         localStorage.setItem('user', JSON.stringify(response.data))
-        console.log(response);
+        // console.log(response);
         return Promise.resolve(response.data)
     })
     .catch(function (error) {

@@ -4,9 +4,10 @@ import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { FaUser } from 'react-icons/fa'
 import { register, reset } from '../features/auth/authSlice'
-import Spinner from '../components/Spinner'
 import qs from 'qs'
 
+import Header from '../components/Header';
+import Spinner from '../components/Spinner'
 
 function Register() {
     const [formData, setFormData] = useState({
@@ -71,7 +72,7 @@ function Register() {
 
             // register(dataRegister)
             dispatch(register(dataRegister))
-            // axios.post("http://localhost:5000/api/register", userData)
+            // axios.post("http://54.65.225.65:5000/api/register", userData)
         }
     }
 
@@ -80,7 +81,8 @@ function Register() {
     }
 
     return (
-        <div className='shadow-box'>
+        <>
+        <Header />
         <section className='heading'>
             <h1>
             <FaUser /> Register
@@ -141,7 +143,7 @@ function Register() {
             </div>
             </form>
         </section>
-        </div>
+        </>
     )
 }
 

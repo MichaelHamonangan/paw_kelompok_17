@@ -10,6 +10,7 @@ function SidebarItem({ faIcon, linkTo, title, className, open=true}) {
                 activeclassname="active" 
                 className={className?className:""}
                 to={linkTo}
+                // onClick={onClickHandler}
             >
                 <FontAwesomeIcon icon={faIcon} color="#000"/>
                 <p className={open?"nav-bar__item-title":"nav-bar__item-title-closed"}>{title}</p>

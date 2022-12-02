@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:5000/api/lpg'
+const API_URL = 'http://54.65.225.65:5000/api/lpg'
 
 // Create new sales
 const createSales = async (salesData, token) => {
