@@ -4,9 +4,10 @@ import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { FaUser } from 'react-icons/fa'
 import { register, reset } from '../features/auth/authSlice'
-import Spinner from '../components/Spinner'
 import qs from 'qs'
 
+import Header from '../components/Header';
+import Spinner from '../components/Spinner'
 
 function Register() {
     const [formData, setFormData] = useState({
@@ -81,6 +82,7 @@ function Register() {
 
     return (
         <>
+        <Header />
         <section className='heading'>
             <h1>
             <FaUser /> Register

@@ -61,16 +61,21 @@ const Dashboard = () => {
           imgAlt="Dashboard"
           illustrationClass="page-illustration"
         />
-        <p>Summary data penjualan PT CAHYO SUMBER MIGAS</p>
-        <div className="dashboard-item-list">
-          <hr />
-          <DashboardItem text={"Penjualan Tabung via Tunai: " + sumTabungTunai} />
-          <DashboardItem text={"Penjualan Tabung via Transfer: " + sumTabungTransfer} />
-          <DashboardItem text={"Total Penjualan Tabung: " + sumTotalTabung} />
-          <hr />
-          <DashboardItem text={"Sum Bayar Tunai: Rp" + sumBayarTunai} />
-          <DashboardItem text={"Sum Bayar Transfer: Rp" + sumBayarTransfer} />
-          <DashboardItem text={"Total Bayar: Rp" + sumTotalBayar} />
+        <div className="dashboard-summary">
+          <p>Summary data penjualan PT CAHYO SUMBER MIGAS</p>
+          <div className="dashboard-item-list">
+            <div className="dashboard-summary__gas">
+              <DashboardItem text={"Penjualan Tabung via Tunai: " + sumTabungTunai} />
+              <DashboardItem text={"Penjualan Tabung via Transfer: " + sumTabungTransfer} />
+              <DashboardItem text={"Total Penjualan Tabung: " + sumTotalTabung} />
+            </div>
+            <vr />
+             <div className="dashboard-summary__cash">
+                <DashboardItem text={"Sum Bayar Tunai: Rp" + sumBayarTunai} />
+                <DashboardItem text={"Sum Bayar Transfer: Rp" + sumBayarTransfer} />
+                <DashboardItem text={"Total Bayar: Rp" + sumTotalBayar} />
+             </div>
+          </div>
         </div>
       </div>
     </div>

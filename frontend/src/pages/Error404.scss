@@ -1,0 +1,37 @@
+#root {
+    width: 100vw;
+    height: 100vh;
+
+    > .container{
+        width: 100vw;
+        height: 100vh;
+
+        .heading {
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .dashboard-item-list {
+            
+            a {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                svg {
+                    margin-right: 10px;
+                    width: 20%;
+                }
+
+                span {
+                    width: 70%;
+                    text-align: left;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}
