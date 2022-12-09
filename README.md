@@ -44,6 +44,4 @@ npm run dev
 
 
 <h3>File :</h3>
-
-- __<a href="https://youtu.be/VdrGNo1SMMc">URL Video Presentasi</a>__
-- __<a href="https://www.canva.com/design/DAFNahzmyOQ/-PF7Z6vrAkRTGRLQJAQdHA/edit?utm_content=DAFNahzmyOQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">URL Slide Presentasi</a>__
+- __<a href="https://docs.google.com/presentation/d/1fE_7-uHsCdeGCLG4tlwIlQRyWngqNNXyMWvD4Ho426U/edit?usp=sharing">URL Slide Presentasi</a>__
