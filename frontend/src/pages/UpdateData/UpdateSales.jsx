@@ -139,8 +139,8 @@ const UpdateSales = () => {
                     </div>
                 </div>
                 <div className="form-title text-center">
-                    <h2 className="text-dark">Input Data LPG</h2>
-                    <span className="text-light">Isi form dibawah untuk memasukkan data baru</span>
+                    <h2 className="text-dark">Update Data LPG</h2>
+                    <span className="text-light">Isi form dibawah untuk mengedit data dari record sudah ada</span>
                 </div>
                 <form onSubmit={onSubmit} className="input-form__card">
                     <div className="new_data">
