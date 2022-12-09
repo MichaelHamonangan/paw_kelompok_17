@@ -17,11 +17,11 @@
 
 <p><h3>CARA PENGGUNAAN</h3></p>
 
-<p><h4>1. INTERNET</h4></p>
+<p><h4>1. Internet</h4></p>
 
 <p>Pertama buka web browser anda. Kemudian, Apad CSM dapat diakses menggunakan link https://bit.ly/ApadCSM</p>
 
-<p><h4>2. LOKAL</h4></p>
+<p><h4>2. Lokal</h4></p>
 
 <p>Apad CSM dijalankan dengan lokal, caranya adalah pertama clone repository ini pada komputer anda. Kemudian, buka windows terminal pada folder root dan jalankan command berikut untuk menginstall back-end: </p>
 
