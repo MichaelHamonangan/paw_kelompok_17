@@ -72,7 +72,7 @@ function Register() {
 
             // register(dataRegister)
             dispatch(register(dataRegister))
-            // axios.post("http://3.113.26.186:5000/api/register", userData)
+            // axios.post(`${process.env.REACT_APP_API_KEY}/register`, userData)
         }
     }
 
