@@ -41,6 +41,13 @@ npm install
 ```
 npm run dev
 ```
+
+<p>Apabila terdapat error 'concurrently' is not recognized as an internal or external command</p>
+
+```
+npm i -g concurrently
+```
+
 <p>Aplikasi sudah bisa diakses dengan web browser dengan link localhost:3000</p>
 
 <br/>
