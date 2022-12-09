@@ -15,21 +15,33 @@
 <p><h3>DESKRIPSI</h3></p>
 <p>Apad CSM merupakan singkatan dari Aplikasi Administrasi PT CAHYO SUMBER MIGAS. Apad CSM merupakan aplikasi berbasis web yang menggunakan teknologi Mongodb serta teknologi Expressjs dan Nodejs. Aplikasi ini membantu penjualan LPG (Liquefied Petroleum Gas) PT CAHYO SUMBER MIGAS dengan cara mendata penjualan mulai dari pemasukan dan pengeluaran hingga pembayaran gas yang dilakukan oleh pelanggan. Aplikasi ini menggunakan bahasa pemrograman JavaScript, EJS, dan CSS. </p>
 
-<p>Apad CSM dijalankan dengan pertama menjalankan </p>
+<p><h3>CARA PENGGUNAAN</h3></p>
+
+<p><h4>1. Internet</h4></p>
+
+<p>Pertama buka web browser anda. Kemudian, Apad CSM dapat diakses menggunakan link https://bit.ly/ApadCSM</p>
+
+<p><h4>2. Lokal</h4></p>
+
+<p>Apad CSM dijalankan dengan lokal, caranya adalah pertama clone repository ini pada komputer anda. Kemudian, buka windows terminal pada folder root dan jalankan command berikut untuk menginstall back-end: </p>
 
 ```
 npm install 
 ```
-
-<p>dilanjutkan dengan </p>
+<p>Kemudian pindah ke folder front-end  dan install bagian front-end</p>
 
 ```
-npm start 
+cd ./frontend
+npm install 
 ```
 
-<p>dan membuka aplikasi web lewat 3.113.26.186.</p>
+<p>Terakhir dilanjutkan dengan balik ke folder root dan menjalankan aplikasi</p>
+
+```
+npm run dev
+```
+<p>Aplikasi sudah bisa diakses dengan web browser dengan link localhost:3000</p>
+
 
 <h3>File :</h3>
-
-- __<a href="https://youtu.be/VdrGNo1SMMc">URL Video Presentasi</a>__
-- __<a href="https://www.canva.com/design/DAFNahzmyOQ/-PF7Z6vrAkRTGRLQJAQdHA/edit?utm_content=DAFNahzmyOQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">URL Slide Presentasi</a>__
+- __<a href="https://docs.google.com/presentation/d/1fE_7-uHsCdeGCLG4tlwIlQRyWngqNNXyMWvD4Ho426U/edit?usp=sharing">URL Slide Presentasi</a>__
