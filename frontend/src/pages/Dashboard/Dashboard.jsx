@@ -55,7 +55,7 @@ const Dashboard = () => {
 
   return (
     <div id="site-main">
-      <div className="container">
+      <div id="dashboard" className="container">
         <Illustration
           image={image}
           imgAlt="Dashboard"

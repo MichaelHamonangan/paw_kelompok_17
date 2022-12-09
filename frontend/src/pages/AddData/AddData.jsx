@@ -16,7 +16,6 @@ function AddData(){
                         <a href="/penjualan-lpg">
                             <FontAwesomeIcon icon={ faAngleDoubleLeft } color="#000"/>
                             Display Data
-                            <hr />
                         </a>
                     </div>
                 </div>

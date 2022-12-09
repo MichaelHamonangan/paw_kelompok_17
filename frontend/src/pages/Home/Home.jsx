@@ -20,7 +20,7 @@ function Home(){
 
     return (
         <main id="site-main">
-            <div className="container">
+            <div id="home" className="container">
                 <Illustration 
                     image={image}
                     imgAlt="Say hello illustration"
