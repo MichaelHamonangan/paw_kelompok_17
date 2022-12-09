@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'http://3.113.26.186:5000/api/lpg'
+const API_URL = `${process.env.REACT_APP_API_KEY}lpg`
 
 // Create new sales
 const createSales = async (salesData, token) => {

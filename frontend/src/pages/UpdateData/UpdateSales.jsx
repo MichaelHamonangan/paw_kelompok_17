@@ -34,7 +34,7 @@ const UpdateSales = () => {
             navigate('/login')
         } else {
             axios
-                .get(`http://3.113.26.186:5000/api/lpg/?id=${id}`, config)
+                .get(`${process.env.REACT_APP_API_KEY}lpg/?id=${id}`, config)
                 .then(function (response) {
                     if (response.status === 200) {
                         // console.log(response.data)
@@ -92,7 +92,7 @@ const UpdateSales = () => {
                 bayar_tunai: bayar_tunai,
             });
             axios
-                .put(`http://3.113.26.186:5000/api/lpg/${id}`, data, config)
+                .put(`${process.env.REACT_APP_API_KEY}lpg/${id}`, data, config)
                 .then(function (response) {
                     if (response.status === 200) {
                         toast.success("Berhasil update pangkalan " + nama)

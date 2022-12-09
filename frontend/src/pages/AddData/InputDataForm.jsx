@@ -68,7 +68,7 @@ function InputDataForm(){
                 },
             };
             axios
-                .post('http://3.113.26.186:5000/api/lpg', data, config)
+                .post(`${process.env.REACT_APP_API_KEY}pg`, data, config)
                 .then(function (response) {
                     if (response.status === 200) {
                         toast.success("Berhasil memasukkan data pada pangkalan " + nama)
