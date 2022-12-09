@@ -28,7 +28,7 @@ function Sales(){
             // const token = thunkAPI.getState().auth.user.token
             let localUser = JSON.parse(localStorage.getItem('user'));
 
-            fetch(`${process.env.REACT_APP_API_KEY}lpg`, {
+            fetch(`${process.env.REACT_APP_API_KEY}/lpg`, {
                 
                 method: 'GET',
                 mode: 'cors',

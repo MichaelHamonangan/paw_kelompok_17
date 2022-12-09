@@ -33,7 +33,7 @@ function SalesDataList({sales, count, updateLink}){
     const onSubmit = () => {
         if (window.confirm("Delete?")) {
             axios
-                .delete(`${process.env.REACT_APP_API_KEY}lpg/${sales._id}`, config)
+                .delete(`${process.env.REACT_APP_API_KEY}/lpg/${sales._id}`, config)
                 .then(function (response) {
                     if (response.status === 200) {
                         toast.success("Berhasil delete data pangkalan")
