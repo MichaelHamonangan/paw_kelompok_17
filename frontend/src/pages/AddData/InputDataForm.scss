@@ -1,15 +1,188 @@
-#site-main {
-    .container {
-        height: 100%;
 
-        form {
-            .new_data {
-                overflow: scroll;
+@media (min-width: 1081px) {
+    
+    #root {
+        > .container {
+            #site-main {
+                > .container {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    overflow: hidden;
+                    
+                    .input-form__card {
+                        width: 70%;
+                        // height: 300px;
+                        box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+                    
+                        padding: 2em;
+                        border-radius: 8px;
+                        background-color: white;
+                    
+                        display: table;
+                        margin-right: auto;
+                        margin-left: auto;
+                        margin-top: 32px;
+                    
+                  }
+              
+                    form {
+                        .new_data {
+                            overflow: scroll;
+                            display: flex;
+                            flex-direction: column;
+                        
+                            > .form-group {
+                                margin: 8px 8px;
+                            }
+                        
+                            .form-group-row {
+                                display: flex;
+                                flex-direction: row;
+                            
+                                > .form-group {
+                                    width: 50%;
+                                    margin: 8px 8px;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
 
-#root > .container #site-main > .container {
-    overflow: scroll;
+@media (min-width: 801px) and (max-width: 1080px) {
+    #root {
+        > .container {
+            #site-main {
+                > .container {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    overflow: scroll;
+
+                    .box-nav {
+                        align-self: flex-start;
+                    }
+                    
+                    .input-form__card {
+                        width: 85%;
+                        // height: 300px;
+                        box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+                    
+                        padding: 2em;
+                        border-radius: 8px;
+                        background-color: white;
+                    
+                        display: table;
+                        margin-right: auto;
+                        margin-left: auto;
+                        margin-top: 32px;
+                    
+                  }
+              
+                    form {
+                        overflow: scroll;
+                        // height: 500px;
+
+                        .new_data {
+                            display: block;
+                            flex-direction: column;
+                            // height: 500px;
+                        
+                            > .form-group {
+                                margin: 8px 8px;
+                            }
+                        
+                            .form-group-row {
+                                display: flex;
+                                flex-direction: row;
+                            
+                                > .form-group {
+                                    width: 50%;
+                                    margin: 8px 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    #root > .container #site-main .container {
+        overflow: scroll;
+    }
+    #root > .container #site-main {
+        width: 85%;
+    }
+
+}
+
+@media (max-width: 800px) {
+    #root {
+        > .container {
+            #site-main {
+                overflow: scroll;
+                width: 85%;
+
+                > .container {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
+                    overflow: hidden;
+                    
+                    .input-form__card {
+                        width: 90%;
+                        box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+                    
+                        padding: 1em;
+                        border-radius: 8px;
+                        background-color: white;
+                    
+                        display: table;
+                        margin-right: auto;
+                        margin-left: auto;
+                        margin-top: 32px;
+                    
+                  }
+              
+                    form {
+                        overflow: scroll;
+                        // height: 500px;
+
+                        .new_data {
+                            display: block;
+                            // height: 500px;
+                        
+                            > .form-group, .form-group-row {
+                                margin: 8px 8px;
+                            }
+                            
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    #root > .container #site-main .container {
+        overflow: scroll;
+    }
+    #root > .container #site-main {
+        width: 85%;
+    }
+
 }

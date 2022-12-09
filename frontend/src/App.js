@@ -8,7 +8,7 @@ import AddData from './pages/AddData/AddData' ;
 import Register from './pages/Register';
 import Sidebar from './components/Sidebar/Sidebar'
 import Sales from './pages/Sales/Sales';
-import UpdateSales from './pages/Sales/UpdateSales';
+import UpdateSales from './pages/UpdateData/UpdateSales';
 import Error404 from './pages/Error404';
 
 function App() {
