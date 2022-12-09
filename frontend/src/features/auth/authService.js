@@ -19,7 +19,7 @@ const register = async (userData) => {
     }
     // console.log("data " + userData)
     await axios
-    .post(API_URL + "register", userData, config)
+    .post(API_URL + "/register", userData, config)
     .then(function (response) {
         localStorage.setItem('user', JSON.stringify(response.data))
         // console.log(response);
@@ -39,7 +39,7 @@ const login = (userData) => {
     }
     // console.log("data " + userData)
     return axios
-    .post(API_URL + "login", userData, config)
+    .post(API_URL + "/login", userData, config)
     .then((response) => {
         localStorage.setItem('user', JSON.stringify(response.data))
         // console.log(response);
